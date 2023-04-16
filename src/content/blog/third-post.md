@@ -1,5 +1,6 @@
 ---
 title: "Third post"
+author: "Erik Craddock"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Jul 15 2022"
 heroImage: "/placeholder-hero.jpg"
