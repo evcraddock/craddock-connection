@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+const tags = [...new Set(posts.map((p) => p.data.tags).flat())];
+---
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+		<main>
+			<section>
+				<ul>
+					{
+          tags.map((t) => {
+          return (
+						<li>
+              <a href={`/tags/${t}`}>{t}</a>
+						</li>
+          )})
+				</ul>
+			</section>
+		</main>
+</Layout>
