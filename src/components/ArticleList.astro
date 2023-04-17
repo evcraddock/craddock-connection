@@ -1,0 +1,16 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+import ArticleItem from '../components/ArticleItem.astro';
+const { posts } = Astro.props;
+
+---
+<div class="mt-10 grid gap-10 md:grid-gols-2 lg:gap-10 xl:grid-cols-4">
+		{
+    posts.map((p: any) => {
+    return (
+      <ArticleItem post={p} />
+    )})
+	</div>
+  </div>
+</div>
+

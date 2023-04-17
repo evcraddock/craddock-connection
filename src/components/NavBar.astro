@@ -1,27 +1,30 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import { Icon } from 'astro-icon';
 ---
 <nav class="min-w-full max-w-full py-4 bg-blue-600 shadow">
-    <div class="container mx-auto flex h-[28px] gap-3 px-3 items-center justify-between">
-      <div class="-mt-[8px] h-full">
-        <a class="min-w-min max-w-min font-bold text-white text-2xl " href="/">Craddock Connection</a>
-      </div>
-      <div class="px-5">
-        <nav class="gap-5 flex flex-1 h-full">
-            <ul class="flex items-center justify-between font-semibold text-sm text-white uppercase no-underline">
-                <li><HeaderLink href="/blog">Blog</HeaderLink></li>
-                <li><HeaderLink href="/about">About</HeaderLink></li>
-            </ul>
-        </nav>
-      </div>
-      <div class="flex flex-1 items-center text-lg no-underline text-white">
-          <a class="" href="https://facebook.com/groups/craddockmorris" target="_blank">
-              <i class="fab fa-facebook"></i>
-          </a>
-          <a class="pl-6" href="https://twitter.com/craddockfamily" target="_blank">
-              <i class="fab fa-twitter"></i>
-          </a>
-      </div>
+  <div class="container mx-auto flex flex-2 h-[28px] gap-3 px-3 items-center justify-between">
+    <div class="-mt-[12px] h-full">
+      <a class="min-w-min max-w-min font-bold text-white text-3xl " href="/">Craddock Connection</a>
     </div>
-
+    <div class="px-5 flex flex-1 hidden">
+      <nav class="h-full">
+        <ul class="flex items-center justify-between font-semibold text-sm text-white uppercase no-underline">
+          <li><HeaderLink href="/blog">All</HeaderLink></li>
+          <li><HeaderLink href="/stories">Stories</HeaderLink></li>
+          <li><HeaderLink href="/recollections">Recollections</HeaderLink></li>
+          <li><HeaderLink href="/obituaries">Obituaries</HeaderLink></li>
+          <li><HeaderLink href="/authors">Authors</HeaderLink></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex space-x-5 w-6 hidden">
+        <a class="align-bottom" href="https://facebook.com/groups/craddockmorris" target="_blank">
+          <Icon class="h-4 w-4" name="logos:facebook" />
+        </a>
+        <a class="" href="https://twitter.com/craddockfamily" target="_blank">
+          <Icon class="h-4" name="logos:twitter" />
+        </a>
+    </div>
+  </div>
 </nav>

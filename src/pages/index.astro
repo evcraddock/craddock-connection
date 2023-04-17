@@ -1,21 +1,11 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import NavBar from '../components/NavBar.astro';
-import ArticleNavBar from '../components/ArticleNavBar.astro';
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-    <NavBar />
-    <ArticleNavBar />
-		<Header title={SITE_TITLE} />
+<Layout
+  title={SITE_TITLE}
+  description={SITE_DESCRIPTION}
+>
 		<main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
 			<p>
@@ -49,6 +39,4 @@ import ArticleNavBar from '../components/ArticleNavBar.astro';
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 			</p>
 		</main>
-		<Footer />
-	</body>
-</html>
+</Layout>

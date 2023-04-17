@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('author'));
+---
+<Layout 
+  title="Authors"
+  description="the people who make the magic"
+>
+		<main>
+			<section>
+				<ul>
+					{
+          posts.map((post) => {
+          return (
+						<li>
+							<a href={`/authors/${post.slug}/`}>{post.data.name}</a>
+						</li>
+          )})
+				</ul>
+			</section>
+		</main>
+</Layout>
+</html>

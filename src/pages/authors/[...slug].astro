@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleList from '../../components/ArticleList.astro';
+import Layout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('author');
+	return posts.map((post) => ({
+    params: { slug: post.slug },
+		props: post,
+	}));
+}
+
+const post = Astro.props;
+const posts = (await getCollection('blog'))
+  .filter((p) => p.data.author == post.data.name)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+;
+
+const { Content } = await post.render();
+---
+<Layout
+    title={post.data.name}
+    description="default"
+>
+<h1>{post.data.name}</h1>
+<Content />
+<ArticleList posts={posts} />
+</Layout>

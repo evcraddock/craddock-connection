@@ -1,0 +1,43 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+
+const { post } = Astro.props;
+---
+<div class="group cursor-pointer">
+  <div class=" overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105   dark:bg-gray-800">
+    <a class="relative block aspect-square" href={`/blog/${post.slug}`}>
+      <img alt="Thumbnail" loading="lazy" decoding="async" data-nimg="fill" class="object-cover transition-all" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" sizes="(max-width: 768px) 30vw, 33vw" src={post.data.heroImage}>
+    </a>
+  </div>
+  <div class="">
+    <div>
+      <h2 class="text-lg mb-0 font-semibold leading-snug tracking-tight mt-2 dark:text-white">
+        <a href={`/blog/${post.slug}`}>
+          <span class="bg-gradient-to-r from-blue-600 to-blue-900 bg-[length:0px_10px] bg-left-bottom duration-500 dark:from-blue-800 dark:to-blue-900">
+            {post.data.title}
+          </span>
+        </a>
+      </h2>
+      <div class="flex gap-3 mt-0 mb-0">
+        { post.data.tags && post.data.tags.map((tag: any) => {
+          return (
+            <a href={`/tags/${tag}/`}>
+              <span class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-blue-600">{tag}</span>
+            </a>
+          )})
+        }
+      </div>
+      <div class="mt-0 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
+        <div class="flex items-center gap-3">
+          <div class="relative h-5 w-5 flex-shrink-0">
+            <img alt="Mario Sanchez" loading="lazy" decoding="async" data-nimg="fill" class="rounded-full object-cover" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="20px" src="">
+          </div>
+          <span class="truncate text-sm">{post.data.author}</span>
+        </div>
+        <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+        <FormattedDate date={post.data.pubDate} />
+      </div>
+    </div>
+  </div>
+</div>
+

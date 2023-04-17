@@ -4,6 +4,7 @@ author: "Erik Craddock"
 description: "Tell your own story, your children will thank you"
 pubDate: "September 07 2010"
 heroImage: "/articles/verden-jail.jpg"
+tags: ['stories', 'recollections']
 ---
 > Your children will thank you
 
