@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleList from '../../../components/ArticleList.astro';
+import Layout from '../../../layouts/BaseLayout.astro';
+
+// export async function getStaticPaths() {
+// 	const authors = await getCollection('author');
+//   const posts = await getCollection('blog')
+// 	return authors.map((profile) => {
+//       posts.filter((p) => p.data.author == profile.data.name)
+//       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+//     ;   
+//     const result = {
+//       params: { slug: profile.slug },
+//       props: { author: profile, posts: posts },
+//     }
+//     
+//     return result;
+//     });
+// }
+
+export async function getStaticPaths({ paginate }) {
+	const authors = await getCollection('author');
+  const posts = await getCollection('blog')
+	return authors.map((profile) => {
+    const tps = posts
+      .filter((p) => p.data.author == profile.data.name)
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());   
+
+      // const result = {
+      //   params: { slug: profile.slug },
+      //   props: { author: profile, posts: tps },
+      // }
+    
+      return paginate(tps, {
+        params: { author: profile.slug },
+        pageSize: 4,
+        profile: profile.data.name,
+      });
+    });
+}
+
+const { profile, page } = Astro.props;
+// const { Content } = await author.render();
+---
+<Layout
+    title={profile}
+    description="default"
+>
+<h1>AUTHOR: {profile}</h1>
+<!-- Content / -->
+<ArticleList posts={page.data} />
+</Layout>

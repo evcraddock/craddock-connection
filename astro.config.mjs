@@ -5,8 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://craddock.org',
   integrations: [mdx(), sitemap(), tailwind(), react()]
 });

@@ -1,6 +1,12 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 import ArticleItem from '../components/ArticleItem.astro';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[]
+}
+
 const { posts } = Astro.props;
 
 ---

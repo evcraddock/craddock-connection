@@ -1,0 +1,21 @@
+---
+title: "Craddock Lore - Crossing the Canadian"
+author: "Erik Craddock"
+description: "Lorem ipsum dolor sit amet"
+pubDate: "Aug 12 2010"
+heroImage: "/placeholder-hero.jpg"
+tags: ['stories']
+---
+I've been called crazy more than once. Jumping from one tree to another fifteen feet in the air, failed double gainers at the local swimming pool, learning to speak Arabic to become a military linguist, attempting to tell the story of a family that is dispersed across at least three continents... getting strange looks from people is something I've grown accustomed to throughout my life. Apparently the apple doesn't fall far from the tree, I've heard many a story about the dare devil that is my father. In fact this seems to be a trend that goes back at least a hundred years.
+As I've mentioned before, my great Aunt Faye had many a story to tell. This is the story of the trip from Stroud, Oklahoma to what is now Verden, Oklahoma by my great Grandfather Alonzo and his new bride Ada Susan ... passed on to my by my Aunt Ada.
+
+In 1901 or 1902 Lon and Ada Craddock set out from Stroud Indian Territory, to start their new married life together. They were heading for Cottonwood Grove, Indian Territory; now Verden Oklahoma. Ada was leaving her family the Thomas Churche's behind.
+
+In a wagon loaded with all they owned, they arrived two days later in El Reno, Indian Territory. They bought some food and Lon got his bride a sack of bulk candy. They drove South until they came to the South Canadian River. From recent rains it was swollen bank full. Many wagons and hacks were camped on the north side to wait until it ran down some. Ada begged Lon to make camp with the other travelers to which he stated, "I'm going over".
+
+No bridges in those days in Indian Territory. He said "I'll tie the wagon bed to the running gears and Bird and Snip will swim us over. Get a good hold". Then with a whip and loud yelling he pulled into the angry water for what Ada said seemed like a life time. He pulled them to a stop on dry ground on the south side, just north of Minco.
+
+Lon said the yells and cheers for them from across the river must have turned to quiet prayers for all seemed still except his, Ada's, and the horses breathing. He said "Ada hand me a piece of candy". She handed him an empty sack, and said "I feel sick, I must have eaten it all". He said; "I'll bet I have the sweetest woman south of the Canadian River". He always thought that to be true and it was.
+Determination to not let the world slow you down is a good character trait in my book. One that I've seen in many of my relatives. I'll bet if the truth were know, there are hundreds of stories just like this one with a Craddock member squarely in the middle. Comment below and tell me about some of them or just let me know that you're there. I'd love to hear from some of you. Let me know how you like what we are doing here and what suggestions you have to make the Craddock Connection better.
+
+If you enjoy reading these stories, email me at connection@craddock.org with your story and make sure and send me some pictures.

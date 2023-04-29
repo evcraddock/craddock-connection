@@ -1,0 +1,38 @@
+
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/BaseLayout.astro';
+import ArticleList from '../../components/ArticleList.astro';
+import Pagination from '../../components/Pagination.astro';
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection('blog');
+  const tags = [...new Set(posts.map((p) => p.data.tags).flat())];
+
+  return tags.map((s) => {
+    const tps = posts
+      .filter((p) => p.data.tags.includes(s || ''))
+      .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+
+      return paginate(tps, {
+        params: { tag: s },
+        pageSize: 4,
+      });
+  });
+}
+
+const { tag } = Astro.params;
+const { page } = Astro.props;
+---
+
+<Layout 
+  title={SITE_TITLE} 
+  description={SITE_DESCRIPTION} 
+>
+      <h2 class="mb-0 uppercase">
+        {tag} 
+      </h2>
+      <ArticleList posts={page.data} />
+    <Pagination previous={page.url.prev} next={page.url.next} />
+</Layout>
