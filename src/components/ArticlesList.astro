@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import ArticleItem from '../components/ArticleItem.astro';
 import Pagination from '../components/Pagination.astro';
+import ArticleItem from '../components/ArticleItem.astro';
 
 interface Props {
   posts: CollectionEntry<'blog'>[],
@@ -10,16 +10,15 @@ interface Props {
 }
 
 const { posts, previous, next } = Astro.props;
-
 ---
-<div class="mt-10 grid gap-10 md:grid-gols-2 lg:gap-10 xl:grid-cols-4">
-		{
+<div class="container mx-auto px-5 py-1 lg:px-2 lg:pt-2">
+  <div class="-m-1 flex flex-wrap md:-m-2">
+    {
     posts.map((p: any) => {
     return (
-    <ArticleItem post={p} />
+        <ArticleItem post={p} />
       )})
     }
-	</div>
   </div>
 </div>
 <Pagination previous={previous} next={next} />

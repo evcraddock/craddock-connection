@@ -4,7 +4,7 @@ author: "Erik Craddock"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Aug 12 2010"
 heroImage: "/placeholder-hero.jpg"
-tags: ['stories']
+tags: ['stories', 'lore']
 ---
 I've been called crazy more than once. Jumping from one tree to another fifteen feet in the air, failed double gainers at the local swimming pool, learning to speak Arabic to become a military linguist, attempting to tell the story of a family that is dispersed across at least three continents... getting strange looks from people is something I've grown accustomed to throughout my life. Apparently the apple doesn't fall far from the tree, I've heard many a story about the dare devil that is my father. In fact this seems to be a trend that goes back at least a hundred years.
 As I've mentioned before, my great Aunt Faye had many a story to tell. This is the story of the trip from Stroud, Oklahoma to what is now Verden, Oklahoma by my great Grandfather Alonzo and his new bride Ada Susan ... passed on to my by my Aunt Ada.

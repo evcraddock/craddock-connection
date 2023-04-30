@@ -2,7 +2,7 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/BaseLayout.astro';
-import ArticleList from '../../components/ArticleList.astro';
+import ArticlesList from '../../components/ArticlesList.astro';
 
 export async function getStaticPaths({ paginate }) {
   const posts = await getCollection('blog');
@@ -15,7 +15,7 @@ export async function getStaticPaths({ paginate }) {
 
       return paginate(tps, {
         params: { tag: s },
-        pageSize: 8,
+        pageSize: 6,
       });
   });
 }
@@ -31,6 +31,6 @@ const { page } = Astro.props;
   <h2 class="mb-0 uppercase">
     {tag} 
   </h2>
-  <ArticleList posts={page.data} previous={page.url.prev} next={page.url.next} />
+  <ArticlesList posts={page.data} previous={page.url.prev} next={page.url.next} />
 </Layout>
 

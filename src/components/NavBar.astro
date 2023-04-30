@@ -7,18 +7,19 @@ import { Icon } from 'astro-icon';
     <div class="-mt-[12px] h-full">
       <a class="min-w-min max-w-min font-bold text-white text-3xl " href="/">Craddock Connection</a>
     </div>
-    <div class="px-5 flex flex-1 hidden">
+    <div class="px-5 justify-between flex flex-1 ">
       <nav class="h-full">
-        <ul class="flex items-center justify-between font-semibold text-sm text-white uppercase no-underline">
-          <li><HeaderLink href="/blog">All</HeaderLink></li>
+        <ul class="flex px-20 gap-4 font-semibold text-sm text-white uppercase no-underline">
           <li><HeaderLink href="/stories">Stories</HeaderLink></li>
           <li><HeaderLink href="/recollections">Recollections</HeaderLink></li>
+          <li><HeaderLink href="/lore">Lore</HeaderLink></li>
+          <li><HeaderLink href="/obituaries">Rambling Roses</HeaderLink></li>
           <li><HeaderLink href="/obituaries">Obituaries</HeaderLink></li>
-          <li><HeaderLink href="/authors">Authors</HeaderLink></li>
+          <li class="hidden"><HeaderLink href="/authors">Authors</HeaderLink></li>
         </ul>
       </nav>
     </div>
-    <div class="flex space-x-5 w-6 hidden">
+    <div class="flex space-x-5 w-6 ">
         <a class="align-bottom" href="https://facebook.com/groups/craddockmorris" target="_blank">
           <Icon class="h-4 w-4" name="logos:facebook" />
         </a>

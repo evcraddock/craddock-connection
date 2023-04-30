@@ -1,21 +1,22 @@
 ---
 import { Icon } from 'astro-icon';
 ---
-<nav class="flex w-full py-1 border-t border-b bg-gray-100" x-data="{ open: false }">
+<nav class="hidden flex w-full border-t border-b bg-gray-100" x-data="{ open: false }">
     <div :class="open ? 'block': 'hidden'" class="w-full flex flex-grow sm:flex sm:items-center sm:w-auto">
-        <div class="w-full container mx-auto flex flex-col sm:flex-row text-md font-semibold uppercase mt-0 px-6 py-2">
+        <div class="container flex sm:flex-row text-md gap-10 font-semibold uppercase">
           <a href="/stories/" class="hover:bg-blue-500 rounded py-2 px-4 mx-2">Stories</a>
           <a href="/recollections" class="hover:bg-blue-500 rounded py-2 px-4 mx-2">Recollections</a>
+          <a href="/obituaries" class="hover:bg-blue-500 rounded py-2 px-4 mx-2">Craddock Lore</a>
+          <a href="/obituaries" class="hover:bg-blue-500 rounded py-2 px-4 mx-2">Rambling Roses</a>
           <a href="/obituaries" class="hover:bg-blue-500 rounded py-2 px-4 mx-2">Obituaries</a>
-          <a href="/authors" class="hover:bg-blue-500 rounded py-2 px-4 mx-2">Authors</a>
+          <!-- span class="hidden container bg-red-100 w-100 flex justify-end gap-4 mx-2 ml-20 mt-2">
+            <a class="align-bottom" href="https://facebook.com/groups/craddockmorris" target="_blank">
+              <Icon class="h-6 w-6" name="logos:facebook" />
+            </a>
+            <a class="" href="https://twitter.com/craddockfamily" target="_blank">
+              <Icon class="h-6 w-6" name="logos:twitter" />
+            </a>
+          </span -->
         </div>
-    </div>
-    <div class="hidden flex space-x-5 w-6">
-        <a class="align-bottom" href="https://facebook.com/groups/craddockmorris" target="_blank">
-          <Icon class="h-4 w-4" name="logos:facebook" />
-        </a>
-        <a class="" href="https://twitter.com/craddockfamily" target="_blank">
-          <Icon class="h-4" name="logos:twitter" />
-        </a>
     </div>
 </nav>

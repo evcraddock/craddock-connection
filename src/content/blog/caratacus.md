@@ -4,7 +4,7 @@ author: "Erik Craddock"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Oct 18 2010"
 heroImage: "/placeholder-hero.jpg"
-tags: ['stories']
+tags: ['stories', 'lore']
 ---
 The origins of the name Craddock go back to ancient times. Craddock, Craddick, Cradoc, Caradoc and Caradog are all alternate spellings of the ancient Celtic name Caratacus which meant "Love". The first bearer of the name in recorded history was a British chieftain of the Catuvellauni tribe in Britain probably near present day Wales. He was the son of the British King Cunobelinus who was killed by the Romans.
 
