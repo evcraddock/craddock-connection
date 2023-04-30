@@ -5,7 +5,7 @@ import PhotoGallery from '../components/PhotoGallery.astro';
 import Wiki from '../pages/wiki.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, description } = Astro.props;
+const { title, description, images } = Astro.props;
 ---
 
 <html lang="en">
@@ -23,7 +23,9 @@ const { title, description } = Astro.props;
       </section>
       <aside class="w-full md:w-1/4 flex flex-col items-center px-3">
         <Wiki />
-        <PhotoGallery /> 
+        { images && images.length > 1 && (
+          <PhotoGallery images={images} /> 
+        )}
       </aside>
 		<Footer />
 		</main>

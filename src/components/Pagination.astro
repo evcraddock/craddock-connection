@@ -1,10 +1,17 @@
 ---
 const { previous, next } = Astro.props;
 ---
+
+<div class="flex items-center gap-3 mt-5 mb-5">
 { previous && (
-  <a href={previous}>Previous</a>
+<a href={previous} class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white">
+  Previous
+</a>
 )}
 
 { next && (
-  <a href={next}>Next</a>
+<a href={next} class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white">
+  Next
+</a>
 )}
+</div>

@@ -6,9 +6,8 @@ import PhotoGallery from '../components/PhotoGallery.astro';
 import Wiki from '../pages/wiki.astro';
 import Footer from '../components/Footer.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
-
-const { title, description } = Astro.props;
+const { title, description, images, slug } = Astro.props;
+const photosUrl = `https://photos.craddock.org/index.php?/tags/${slug.replaceAll("-", "_")}`;
 ---
 
 <html lang="en">
@@ -26,7 +25,9 @@ const { title, description } = Astro.props;
       </section>
       <aside class="w-full md:w-1/4 flex flex-col items-center px-3">
         <Wiki />
-        <PhotoGallery /> 
+        { images && images.length > 1 && (
+          <PhotoGallery images={images} photosUrl={photosUrl} /> 
+        )}
       </aside>
 		<Footer />
 		</main>

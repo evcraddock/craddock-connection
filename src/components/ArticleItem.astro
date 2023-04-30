@@ -1,45 +1,77 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import { truncateString } from '../utils';
 import FormattedDate from '../components/FormattedDate.astro';
 
 interface Props {
   post: CollectionEntry<'blog'>;
 }
 
-const { post } = Astro.props;
+interface Author {
+  name: string,
+  image: string,
+}
+
+const { post  } = Astro.props;
+const authors = await getCollection('author');
+const articleAuthor = authors.find((a) => post.data.author != '' && a.data.name == post.data.author)
+let author: Author = {
+  name: 'Unknown Author',
+  image: '',
+}
+
+if (articleAuthor != null) {
+  author = articleAuthor.data;
+}
+
+const data = await fetch(`https://photos.craddock.org/ws.php?format=json&method=pwg.tags.getImages&tag_name=${post.slug}&order=name`).then((response) => response.json());
+
+const heroImage = {
+  location: '/placeholder-hero.jpg',
+  name: 'no image',
+}
+
+if (data && data.result && data.result.images.length > 0) {
+  heroImage.location = data.result.images[0].derivatives.xsmall.url;
+  heroImage.name = data.result.images[0].name;
+}
+
 ---
 <div class="group cursor-pointer">
   <div class=" overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105   dark:bg-gray-800">
     <a class="relative block aspect-square" href={`/blog/${post.slug}`}>
-      <img alt="Thumbnail" loading="lazy" decoding="async" data-nimg="fill" class="object-cover transition-all" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" sizes="(max-width: 768px) 30vw, 33vw" src={post.data.heroImage}>
+      <img alt="Thumbnail" loading="lazy" decoding="async" data-nimg="fill" class="object-cover transition-all" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;" sizes="(max-width: 768px) 30vw, 33vw" src={heroImage.location}>
     </a>
   </div>
-  <div class="">
+  <div>
     <div>
       <h2 class="text-lg mb-0 font-semibold leading-snug tracking-tight mt-2 dark:text-white">
         <a href={`/blog/${post.slug}`}>
           <span class="bg-gradient-to-r from-blue-600 to-blue-900 bg-[length:0px_10px] bg-left-bottom duration-500 dark:from-blue-800 dark:to-blue-900">
-            {post.data.title}
+            {truncateString(post.data.title, 25)}
           </span>
         </a>
       </h2>
       <div class="flex gap-3 mt-0 mb-0">
         { post.data.tags && post.data.tags.map((tag: any) => {
           return (
-            <a href={`/tags/${tag}/`}>
-              <span class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-blue-600">{tag}</span>
+          <a href={`/${tag}/`}>
+              <span class="inline-block text-xs font-medium tracking-wider uppercase mt-1 text-blue-600">{tag}</span>
             </a>
           )})
         }
       </div>
       <div class="mt-0 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
-        <div class="flex items-center gap-3">
-          <div class="relative h-5 w-5 flex-shrink-0">
-            <img alt="Mario Sanchez" loading="lazy" decoding="async" data-nimg="fill" class="rounded-full object-cover" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="20px" src="">
-          </div>
+        <div class="flex items-center gap-1 h-5">
+        { author.image !== '' && (
+        <span>
+          <img alt="" loading="lazy" decoding="async" data-nimg="fill" class="h-5 w-5 rounded-full object-cover" src={author.image} />
+        </span>
+        )}
           <span class="truncate text-sm">{post.data.author}</span>
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
         </div>
-        <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
         <FormattedDate date={post.data.pubDate} />
       </div>
     </div>

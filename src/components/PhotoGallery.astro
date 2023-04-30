@@ -1,13 +1,16 @@
 ---
+const { images, photosUrl } = Astro.props;
 ---
 <div class="w-full bg-white shadow flex flex-col my-4 p-6">
     <p class="text-xl font-semibold pb-5">Photos</p>
     <div class="grid grid-cols-3 gap-3">
-        <img class="hover:opacity-75" src="https://photos.craddock.org/_data/i/upload/2023/04/15/20230415193117-227e8d0c-me.jpg">
-        <img class="hover:opacity-75" src="https://photos.craddock.org/_data/i/upload/2023/04/15/20230415192515-bcea2eac-me.jpg">
-        <img class="hover:opacity-75" src="https://photos.craddock.org/_data/i/upload/2023/04/15/20230415193125-50c68912-me.jpg">
+        { images && images.map((a: any) => {
+          return (
+            <img class="hover:opacity-75" src={a.derivatives.small.url} />
+          )
+        })}
     </div>
-    <a href="" class="w-full bg-blue-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
+    <a href={photosUrl} class="w-full bg-blue-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
         See More Images
     </a>
 </div>

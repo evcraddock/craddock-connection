@@ -3,7 +3,6 @@ import Layout from '../../layouts/BaseLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import ArticleList from '../../components/ArticleList.astro';
-import Pagination from '../../components/Pagination.astro';
 
 export async function getStaticPaths({ paginate }) {
   const blogs = (await getCollection('blog'))
@@ -16,6 +15,5 @@ const { page } = Astro.props;
    <h2 class="mb-0 uppercase">
     ALL 
    </h2>
-   <ArticleList posts={page.data}/> 
-    <Pagination previous={page.url.prev} next={page.url.next} />
+   <ArticleList posts={page.data} previous={page.url.prev} next={page.url.next}/> 
 </Layout>

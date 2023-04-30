@@ -12,12 +12,34 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
+const { slug } = Astro.params;
+
+const data = await fetch(`https://photos.craddock.org/ws.php?format=json&method=pwg.tags.getImages&tag_name=${slug}&order=name`).then((response) => response.json());
+
+let images = [];
+const heroImage = {
+  location: '/placeholder-hero.jpg',
+  name: 'no image',
+}
+
+if (data && data.result && data.result.images.length > 0) {
+  heroImage.location = data.result.images[0].derivatives.large.url;
+  heroImage.name = data.result.images[0].name;
+  images = data.result.images;
+}
+
+const postProps = {
+  ...post.data,
+  slug: post.slug,
+  images: images,
+}
+
 const { Content } = await post.render();
 ---
-<BlogPost {...post.data}>
+<BlogPost {...postProps}>
   <div class="mb-2">
-      {post.data.heroImage && 
-        <img class="mb-0" src={post.data.heroImage} alt="" />
+      {heroImage && 
+        <img class="mb-0" src={heroImage.location} alt={heroImage.name} />
       }
       { !post.data.pubDate && 
         <FormattedDate date={post.data.pubDate} />
