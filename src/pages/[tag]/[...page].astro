@@ -28,7 +28,7 @@ const { page } = Astro.props;
   title={SITE_TITLE} 
   description={SITE_DESCRIPTION} 
 >
-  <h2 class="mb-0 uppercase">
+  <h2 class="mb-0 mt-4 px-2 uppercase">
     {tag} 
   </h2>
   <ArticlesList posts={page.data} previous={page.url.prev} next={page.url.next} />

@@ -6,14 +6,16 @@ import ArticleList from '../../components/ArticlesList.astro';
 
 export async function getStaticPaths({ paginate }) {
   const blogs = (await getCollection('blog'))
-  return paginate(blogs, { pageSize: 4 });
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+
+  return paginate(blogs, { pageSize: 6 });
 }
 
 const { page } = Astro.props;
 ---
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} >
-   <h2 class="mb-0 uppercase">
-    ALL 
+   <h2 class="mb-0 mt-4 px-2 uppercase">
+    All Articles 
    </h2>
    <ArticleList posts={page.data} previous={page.url.prev} next={page.url.next}/> 
 </Layout>

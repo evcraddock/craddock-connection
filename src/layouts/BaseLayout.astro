@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import PhotoGallery from '../components/PhotoGallery.astro';
 import Wiki from '../pages/wiki.astro';
+import SocialMedia from '../components/SocialMedia.astro';
 import Footer from '../components/Footer.astro';
 
 const { title, description, images } = Astro.props;
@@ -23,6 +24,7 @@ const { title, description, images } = Astro.props;
       </section>
       <aside class="w-full md:w-1/4 flex flex-col items-center px-3">
         <Wiki />
+        <SocialMedia />
         { images && images.length > 1 && (
           <PhotoGallery images={images} /> 
         )}
