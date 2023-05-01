@@ -5,7 +5,7 @@ import Layout from '../../../layouts/BaseLayout.astro';
 
 // export async function getStaticPaths() {
 // 	const authors = await getCollection('author');
-//   const posts = await getCollection('blog')
+//   const posts = await getCollection('article')
 // 	return authors.map((profile) => {
 //       posts.filter((p) => p.data.author == profile.data.name)
 //       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -21,7 +21,7 @@ import Layout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths({ paginate }) {
 	const authors = await getCollection('author');
-  const posts = await getCollection('blog')
+  const posts = await getCollection('article')
 	return authors.map((profile) => {
     const tps = posts
       .filter((p) => p.data.author == profile.data.name)

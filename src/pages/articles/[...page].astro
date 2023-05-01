@@ -5,10 +5,10 @@ import { getCollection } from 'astro:content';
 import ArticleList from '../../components/ArticlesList.astro';
 
 export async function getStaticPaths({ paginate }) {
-  const blogs = (await getCollection('blog'))
+  const articles = (await getCollection('article'))
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
-  return paginate(blogs, { pageSize: 6 });
+  return paginate(articles, { pageSize: 6 });
 }
 
 const { page } = Astro.props;

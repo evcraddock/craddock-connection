@@ -7,7 +7,7 @@ const author = defineCollection({
   }),
 });
 
-const blog = defineCollection({
+const article = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
@@ -27,4 +27,4 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { author, blog };
+export const collections = { author, article };

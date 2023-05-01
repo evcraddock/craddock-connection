@@ -5,7 +5,7 @@ import Layout from '../../layouts/BaseLayout.astro';
 import ArticlesList from '../../components/ArticlesList.astro';
 
 export async function getStaticPaths({ paginate }) {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('article');
   const tags = [...new Set(posts.map((p) => p.data.tags).flat())];
 
   return tags.map((s) => {
