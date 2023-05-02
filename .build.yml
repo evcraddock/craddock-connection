@@ -1,4 +1,4 @@
-image: debian/stable
+image: archlinux
 packages: 
   - nodejs
   - npm
@@ -6,6 +6,7 @@ sources:
   - https://git.sr.ht/~erikcraddock/craddock-connection
 tasks:
   - setup: |
+      npm install astro
       cd craddock-connection
       npm install
   - build: |
