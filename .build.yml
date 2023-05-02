@@ -1,0 +1,13 @@
+image: debian/stable
+packages: 
+  - nodejs
+  - npm
+sources:
+  - https://git.sr.ht/~erikcraddock/craddock-connection
+tasks:
+  - setup: |
+      cd craddock-connection
+      npm install
+  - build: |
+      cd craddock-connection
+      npm run build
