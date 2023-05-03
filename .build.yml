@@ -5,6 +5,8 @@ packages:
   - docker
 sources:
   - https://git.sr.ht/~erikcraddock/craddock-connection
+secrets:
+  - 9e43f7a3-cbad-4344-8946-d611e729ea3c
 tasks:
   - setup: |
       sudo systemctl enable --now docker
@@ -13,6 +15,9 @@ tasks:
       npm install
   - build: |
       cd craddock-connection
+      export VERSION=$(node -e 'console.log(require("./package.json").version)')
       npm run build
-      docker build -t evcraddock/craddock-connection-image:$JOB_ID .
+      docker build -t evcraddock/craddock-connection:$VERSION.$JOB_ID .
+      docker login -u evcraddock -p $(< ~/.docker-secret)
+      docker push evcraddock/craddock-connection:$VERSION.$JOB_ID
 
