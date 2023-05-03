@@ -1,3 +1,3 @@
-FROM nginx:alpine as runtime
+FROM nginx:alpine 
 
 COPY ./dist/ /usr/share/nginx/html/
