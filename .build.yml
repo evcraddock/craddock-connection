@@ -2,13 +2,17 @@ image: archlinux
 packages: 
   - nodejs
   - npm
+  - docker
 sources:
   - https://git.sr.ht/~erikcraddock/craddock-connection
 tasks:
   - setup: |
+      sudo systemctl enable --now docker
       npm install astro
       cd craddock-connection
       npm install
   - build: |
       cd craddock-connection
       npm run build
+      docker build -t evcraddock/craddock-connection-image:$JOB_ID .
+
