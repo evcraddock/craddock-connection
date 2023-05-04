@@ -6,7 +6,7 @@ packages:
 sources:
   - https://git.sr.ht/~erikcraddock/craddock-connection
 secrets:
-  - 9e43f7a3-cbad-4344-8946-d611e729ea3c
+  - 3e96a591-6058-4112-ad3a-96163c8c06e0
 tasks:
   - setup: |
       sudo systemctl enable --now docker
@@ -19,5 +19,11 @@ tasks:
       cd craddock-connection
       export VERSION=$(node -e 'console.log(require("./package.json").version)')
       docker build -t evcraddock/craddock-connection:$VERSION.$JOB_ID -t evcraddock/craddock-connection:latest .
+      cat ~/.docker-secret | docker login -u evcraddock --password-stdin 
+      docker push evcraddock/craddock-connection:$VERSION.$JOB_ID
+triggers:
+  - action: webhook
+    condition: success
+    url: https://craddock.org:9443/api/webhooks/5f96a2bd-0e0d-4fc2-8c87-1d214a11e600?tag=latest
 
 
