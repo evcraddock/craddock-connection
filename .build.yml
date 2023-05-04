@@ -19,8 +19,8 @@ tasks:
       cd craddock-connection
       export VERSION=$(node -e 'console.log(require("./package.json").version)')
       docker build -t evcraddock/craddock-connection:$VERSION.$JOB_ID -t evcraddock/craddock-connection:latest .
-      docker login -u evcraddock -p $(< ~/.docker-secret)
-      docker push evcraddock/craddock-connection:$VERSION.$JOB_ID
+      # docker login -u evcraddock -p $(< ~/.docker-secret)
+      # docker push evcraddock/craddock-connection:$VERSION.$JOB_ID
 triggers:
   - action: webhook
     condition: success
