@@ -18,7 +18,7 @@ tasks:
   - deploy: |
       cd craddock-connection
       export VERSION=$(node -e 'console.log(require("./package.json").version)')
-      docker build -t evcraddock/craddock-connection:$VERSION.$JOB_ID -t .
+      docker build -t evcraddock/craddock-connection:$VERSION.$JOB_ID .
       cat ~/.docker-secret | docker login -u evcraddock --password-stdin 
       docker tag evcraddock/craddock-connection:$VERSION.$JOB_ID evcraddock/craddock-connection:latest
       docker push evcraddock/craddock-connection:$VERSION.$JOB_ID
