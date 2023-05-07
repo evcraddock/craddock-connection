@@ -6,7 +6,7 @@ packages:
 sources:
   - https://git.sr.ht/~erikcraddock/craddock-connection
 secrets:
-  - 3e96a591-6058-4112-ad3a-96163c8c06e0
+  - 6b4c020e-b1c7-4e4f-9aea-1f2584149be1
 tasks:
   - setup: |
       sudo systemctl enable --now docker
