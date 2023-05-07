@@ -22,6 +22,7 @@ tasks:
       cat ~/.docker-secret | docker login -u evcraddock --password-stdin 
       docker tag evcraddock/craddock-connection:$VERSION.$JOB_ID evcraddock/craddock-connection:latest
       docker push evcraddock/craddock-connection:$VERSION.$JOB_ID
+      docker push evcraddock/craddock-connection:latest
 triggers:
   - action: webhook
     condition: success
