@@ -1,10 +1,10 @@
 ---
-title: "Recollections: A Craddock is born"
-author: "Erik Craddock"
-description: "Tell your own story, your children will thank you"
+title: "A Craddock is born"
+author: "Ada Morris"
+description: "Ada remembers the day Dan was born"
 pubDate: "October 12 2010"
 heroImage: "/placeholder-hero.jpg"
-tags: ['stories', 'recollections']
+tags: ['recollections']
 ---
 My earliest memory is of the night my brother Dan was born. I was five but it is still very vivid in my mind.
 

@@ -1,10 +1,10 @@
 ---
-title: "Craddock Lore - Cottonwood Grove"
+title: "Cottonwood Grove"
 author: "Erik Craddock"
-description: "Lorem ipsum dolor sit amet"
+description: "settling in Verden, Ok"
 pubDate: "Aug 21 2010"
 heroImage: "/placeholder-hero.jpg"
-tags: ['stories']
+tags: ['lore']
 ---
 It's always good to get back home. For me home is Caddo county, Oklahoma. I went back for a visit a couple of weeks ago. Not much had changed, but honestly I didn't expect it to, change travels slowly back home. My family has lived in Oklahoma since 1897, several years before Oklahoma became the 46th state in the union. My great grandfather Alonzo Shields Craddock, newly married to Ada Susan Church, moved in 1902 from Stroud, Oklahoma to a farm that was seven miles north and two west of Verden, Oklahoma; known then as Cottonwood Grove.
 
