@@ -1,7 +1,7 @@
 ---
 title: "Uninvited Swine"
 author: "Ada Morris"
-description: "Lorem ipsum dolor sit amet"
+description: "Grandma wants nothing to do with it"
 pubDate: "Sep 22 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['recollections']

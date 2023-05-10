@@ -1,7 +1,7 @@
 ---
 title: "Glen Craddock at Hanford"
 author: "Bill Craddock"
-description: "Lorem ipsum dolor sit amet"
+description: "Manhattan Project Hanford B-Reactor"
 pubDate: "Sep 20 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['lore']

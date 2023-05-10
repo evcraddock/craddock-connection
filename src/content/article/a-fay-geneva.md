@@ -1,7 +1,7 @@
 ---
 title: "A Fay Geneva"
 author: "Erik Craddock"
-description: "Lorem ipsum dolor sit amet"
+description: "She looks like a Fay Geneva"
 pubDate: "Sep 28 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['Lore']

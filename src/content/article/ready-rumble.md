@@ -1,7 +1,7 @@
 ---
 title: "Are You Ready to Rumble?"
 author: "Erik Craddock"
-description: "Lorem ipsum dolor sit amet"
+description: "Devin Craddock - Cage Fight"
 pubDate: "Jan 05 2011"
 heroImage: "/placeholder-hero.jpg"
 tags: ['stories']
