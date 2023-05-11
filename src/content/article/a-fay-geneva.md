@@ -15,4 +15,4 @@ Alonzo Shields Craddock (1878 - 1935)
 David William Craddock (1844 - 1933)
 James Bascum Craddock (1819 - 1904)
 
-Aunt Fay passed on in 2006, she was loved by everyone who knew her including me. What are your memories of her? Comment below and let us know.If you enjoy reading little stories like this one, be sure and send some of your own about parents, grand parents or children to connection@craddock.org. We would all love to hear about them.
+Aunt Fay passed on in 2006, she was loved by everyone who knew her including me. What are your memories of her? If you enjoy reading little stories like this one, be sure and send some of your own about parents, grand parents or children to connection@craddock.org. We would all love to hear about them.
