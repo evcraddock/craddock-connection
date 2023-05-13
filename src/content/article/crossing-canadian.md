@@ -16,4 +16,4 @@ Lon said the yells and cheers for them from across the river must have turned to
 
 Determination to not let the world slow you down is a good character trait in my book. One that I've seen in many of my relatives. I'll bet if the truth were known, there are hundreds of stories just like this one with a Craddock member squarely in the middle. I'd love to hear from you. Let me know how you like what we are doing here and what suggestions you have to make the Craddock Connection better.
 
-If you enjoy reading these stories, email me at connection@craddock.org with your story and make sure and send me some pictures.
+If you enjoy reading these stories, email me at connection@craddock.org with your story and make sure to include some pictures.
