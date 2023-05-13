@@ -14,6 +14,6 @@ No bridges in those days in Indian Territory. He said "I'll tie the wagon bed to
 
 Lon said the yells and cheers for them from across the river must have turned to quiet prayers for all seemed still except his, Ada's, and the horses breathing. He said "Ada hand me a piece of candy". She handed him an empty sack, and said "I feel sick, I must have eaten it all". He said; "I'll bet I have the sweetest woman south of the Canadian River". He always thought that to be true and it was.
 
-Determination to not let the world slow you down is a good character trait in my book. One that I've seen in many of my relatives. I'll bet if the truth were known, there are hundreds of stories just like this one with a Craddock member squarely in the middle. Comment below and tell me about some of them or just let me know that you're there. I'd love to hear from some of you. Let me know how you like what we are doing here and what suggestions you have to make the Craddock Connection better.
+Determination to not let the world slow you down is a good character trait in my book. One that I've seen in many of my relatives. I'll bet if the truth were known, there are hundreds of stories just like this one with a Craddock member squarely in the middle. I'd love to hear from you. Let me know how you like what we are doing here and what suggestions you have to make the Craddock Connection better.
 
 If you enjoy reading these stories, email me at connection@craddock.org with your story and make sure and send me some pictures.
