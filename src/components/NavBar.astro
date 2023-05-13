@@ -1,31 +1,21 @@
 ---
+import NavSidebar from './NavSidebar';
 import HeaderLink from "./HeaderLink.astro";
-import { Icon } from 'astro-icon';
 ---
-<nav class="min-w-full max-w-full py-4 bg-blue-600 shadow">
-  <div class="container mx-auto flex flex-2 h-[28px] gap-3 px-3 items-center justify-between">
-    <div class="-mt-[12px] h-full">
-      <a class="min-w-min max-w-min font-bold text-white text-3xl " href="/">Craddock Connection</a>
-    </div>
-    <div class="px-5 justify-between flex flex-1 ">
-      <nav class="h-full">
-        <ul class="flex px-20 gap-4 font-semibold text-sm text-white uppercase no-underline">
-          <li><HeaderLink href="/articles">All Articles</HeaderLink></li>
-          <li><HeaderLink href="/recollections">Recollections</HeaderLink></li>
-          <li><HeaderLink href="/lore">Lore</HeaderLink></li>
-          <li><HeaderLink href="/rambling-rose">Rambling Roses</HeaderLink></li>
-          <li><HeaderLink href="/obituaries">Obituaries</HeaderLink></li>
-          <li class="hidden"><HeaderLink href="/authors">Authors</HeaderLink></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="hidden flex space-x-5 w-6 ">
-        <a class="align-bottom" href="https://facebook.com/groups/craddockmorris" target="_blank">
-          <Icon class="h-4 w-4" name="logos:facebook" />
-        </a>
-        <a class="" href="https://twitter.com/craddockfamily" target="_blank">
-          <Icon class="h-4" name="logos:twitter" />
-        </a>
-    </div>
+<nav class="container flex justify-between px-4 py-4 mx-auto bg-blue-600">
+  <div>
+    <a
+        class="my-1 mr-2 flex items-center font-bold text-white lg:mb-0 lg:mt-0"
+        href="/">
+        <img class="mr-2 h-6 hidden" src="/craddock-logo.png" alt="" loading="lazy" />
+        <span class="px-2 font-large uppercase">Craddock Connection</span>
+    </a>
   </div>
+  <div class="hidden space-x-8 lg:flex text-white uppercase">
+    <HeaderLink href="/articles">All</HeaderLink>
+    <HeaderLink href="/recollections">Recollections</HeaderLink>
+    <HeaderLink href="/lore">Lore</HeaderLink>
+    <HeaderLink href="/rambling-rose">Rambling Roses</HeaderLink>
+  </div>
+  <NavSidebar client:only="react"/> 
 </nav>
