@@ -17,4 +17,4 @@ Still, before I was willing to let him play I had a couple of stipulations.
     The last young player to compete ended up accusing an uncle of cheating and actually took a swing at him. I won’t name any names (Joshua Morris) but the event has gone down in infamy.
 - <strong>Rule number 2</strong>) no trash talking or bragging if you win. This was the main concern that most people had. The last thing anybody wanted was a cocky little teenager spouting out taunts. I informed Johnathon that there was an art to trash talking at the pitch tournament that could only be learned through experience. This meant that he could do NO trash talking even if people mouthed off to him first. If he wanted to play he would have to grin and bear it. I honestly didn’t think he was up to it, but he did great and everyone was glad he played.
 
-We all had a great time and I want to thank Joe and Debbie Craddock for once again allowing us to have the tournament at their house.
+We all had a great time and I want to thank Joe and Debbie Craddock for once again hosting the tournament at their house.
