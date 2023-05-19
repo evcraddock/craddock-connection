@@ -6,14 +6,14 @@ const { previous, next } = Astro.props;
     <ul class="list-none flex justify-center">
       { previous && (
       <li>
-        <a href={previous} class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white">
+        <a href={previous} class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white no-underline">
           Previous
         </a>
       </li>
       )}
       { next && (
       <li>
-        <a href={next} class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white">
+        <a href={next} class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white no-underline">
           Next
         </a>
       </li>

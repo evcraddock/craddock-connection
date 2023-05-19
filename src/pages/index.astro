@@ -1,6 +1,13 @@
 ---
 import Layout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import ArticlesList from '../components/ArticlesList.astro';
+
+const articles = await getCollection('article')
+
+const posts = await Promise.all(articles);
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <Layout
   title={SITE_TITLE}
@@ -14,10 +21,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       <p>
       Our goal is to create a place that will make it easy to stay connected with everyone. The plan is to publish stories about aunts and uncles, cousins, grandparents etc, as well as other projects. We hope to get everyone involved. If you have something to contribute please send it to us at <a href="mailto:connection@craddock.org">connection@craddock.org</a>.
 			</p>
+      <h3 class="mb-0">Most Recent Articles</h3>
+      <ArticlesList posts={posts} size={3} />
+      <div class="mt-10 bg-gray-100 px-2 py-0 flex justify-center">
+        <a href="/articles" class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white no-underline">
+          View More Articles
+        </a>
+      </div>
       <p>
-      We also are working on several different projects that might be interesting to some of you
+        We also are working on several different projects that might be interesting to some of you.
       </p>
-			<ul>
+			<ul class="bg-blue-200 py-4">
         <li><a href="https://wiki.craddock.org" target="_blank">Craddock Family Wiki</a> - Coming Soon!</li>
         <li><a href="https://videos.craddock.org/home" target="_blank">Craddock Family Videos</a> - Online</li>
         <li><a href="https://photos.craddock.org" target="_blank">Craddock Family Photo Repository</a> - Online</li>

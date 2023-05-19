@@ -5,20 +5,24 @@ import ArticleItem from '../components/ArticleItem.astro';
 
 interface Props {
   posts: CollectionEntry<'article'>[],
-  previous: string,
-  next: string,
+  previous?: string,
+  next?: string,
+  size?: number,
 }
 
-const { posts, previous, next } = Astro.props;
+const { posts, previous, next, size } = Astro.props;
 ---
-<div class="container mx-auto px-5 py-0 lg:px-2 lg:pt-0">
+<div class="container mx-auto px-3 py-0 lg:px-2 lg:pt-0">
   <div class="-m-0 flex flex-wrap md:-m-1">
     {
-    posts.map((p: any) => {
-    return (
+    posts.slice(0, size)
+    .map((p: any) => {
+      return (
         <ArticleItem post={p} />
       )})
     }
   </div>
 </div>
+{ (previous || next) && (
 <Pagination previous={previous} next={next} />
+)}
