@@ -9,11 +9,12 @@ import Footer from '../components/Footer.astro';
 
 const { title, description, images, slug } = Astro.props;
 const photosUrl = `https://photos.craddock.org/index.php?/tags/${slug.replaceAll("-", "_")}`;
+const heroImage = (images.length > 0) ? images[0].derivatives.small.url : null;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={heroImage} />
 	</head>
 
   <body>
