@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { newsletter, newsletters } from '../../content/newsletters';
+import NewsletterItem from '../../components/NewsletterItem.astro';
+import Pagination from '../../components/Pagination.astro';
+
+export async function getStaticPaths({ paginate }) {
+  newsletters.sort((a: any, b: any) => b.publishDate - a.publishDate)
+
+  return paginate(newsletters, { pageSize: 12 });
+}
+
+const { page } = Astro.props;
+const previous = page.url.prev;
+const next = page.url.next;
+---
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+		<main>
+			<section>
+        <h2 class="mb-4 mt-4 px-2 uppercase">
+          Craddock Connection Newsletters
+        </h2>
+        <div class="container mx-auto px-3 py-0 lg:px-2 lg:pt-0">
+          <div class="-m-0 flex flex-wrap md:-m-1">
+            {
+              page.data.map((l: newsletter) => {
+                return (
+                  <NewsletterItem post={l} />
+                )
+              })
+            }
+          </div>
+        </div>
+        { (previous || next) && (
+        <Pagination previous={previous} next={next} />
+        )}
+    </section>
+  </main>
+</Layout>
