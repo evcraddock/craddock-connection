@@ -5,6 +5,7 @@ description: "Grandma wants nothing to do with it"
 pubDate: "Sep 22 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['recollections']
+visible: true
 ---
 The things that I know about my Grandpa Alonzo Craddock are little stories handed down  by my Dad and Aunt Fay. He died four years before I was born.
 

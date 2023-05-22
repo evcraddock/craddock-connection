@@ -23,7 +23,7 @@ const heroImage = {
 }
 
 if (data && data.result && data.result.images.length > 0) {
-  heroImage.location = data.result.images[0].derivatives.large.url;
+  heroImage.location = data.result.images[0].derivatives.large.url || '';
   heroImage.name = data.result.images[0].name;
   images = data.result.images;
 }

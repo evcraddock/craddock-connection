@@ -5,11 +5,12 @@ import Layout from '../../layouts/BaseLayout.astro';
 import ArticlesList from '../../components/ArticlesList.astro';
 
 export async function getStaticPaths({ paginate }) {
-  const posts = await getCollection('article');
-  const tags = [...new Set(posts.map((p) => p.data.tags).flat())];
+  const articles = (await getCollection('article'))
+      .filter((a) => a.data.visible)
+  const tags = [...new Set(articles.map((p) => p.data.tags).flat())];
 
   return tags.map((s) => {
-    const tps = posts
+    const tps = articles
       .filter((p) => p.data.tags.includes(s || ''))
       .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
 

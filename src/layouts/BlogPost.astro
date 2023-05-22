@@ -9,7 +9,7 @@ import Footer from '../components/Footer.astro';
 
 const { title, description, images, slug } = Astro.props;
 const photosUrl = `https://photos.craddock.org/index.php?/tags/${slug.replaceAll("-", "_")}`;
-const heroImage = (images.length > 0) ? images[0].derivatives.small.url : null;
+const heroImage = (images == '' || images == null) ? null : images[0].derivatives.small.url;
 ---
 
 <html lang="en">
@@ -19,9 +19,9 @@ const heroImage = (images.length > 0) ? images[0].derivatives.small.url : null;
 
   <body>
     <Header />
-		<main class="container mx-auto flex flex-wrap py-1">
+		<main class="container h-screen mx-auto flex flex-wrap py-1">
       <section class="w-full md:w-3/4 flex flex-col px-3">
-          <article class="max-w-screen-xl prose prose-headings:h-8 prose-p:text-lg ">
+        <article class="max-w-screen-xl h-full prose prose-headings:h-8 prose-p:text-lg ">
 			  	  <slot />
 			    </article>
       </section>

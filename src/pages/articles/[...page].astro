@@ -6,6 +6,7 @@ import ArticleList from '../../components/ArticlesList.astro';
 
 export async function getStaticPaths({ paginate }) {
   const articles = (await getCollection('article'))
+      .filter((a) => a.data.visible)
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
   return paginate(articles, { pageSize: 6 });

@@ -5,6 +5,7 @@ description: "Ada remembers the day Dan was born"
 pubDate: "October 12 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['recollections']
+visible: true
 ---
 My earliest memory is of the night my brother Dan was born. I was five but it is still very vivid in my mind.
 

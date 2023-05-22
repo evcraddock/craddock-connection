@@ -5,6 +5,7 @@ description: "your children will thank you"
 pubDate: "May 12, 2023"
 heroImage: "/articles/verden-jail.jpg"
 tags: ['stories', 'recollections']
+visible: true
 ---
 I grew up hearing stories about the crazy antics of all my Craddock relatives. I can remember us sitting around laughing about grandpa Van doing a back flip but catching his thumbs in his belt loops. Or dad and uncle Joe pulling pranks on their older brothers then hiding in the woods til the heat died down. Over the years, I have spent a lot of time trying to get all of those old stories written down. I have a lot of them. I will be posting them here on this website a few at a time for awhile.
 

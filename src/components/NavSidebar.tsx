@@ -77,6 +77,9 @@ const NavSidebar = () => {
                 <a href="/articles">All Articles</a>
               </li>
               <li className="cursor-pointer text-white uppercase semi-bold">
+                <a href="/newsletters">Newsletters</a>
+              </li>
+              <li className="cursor-pointer text-white uppercase semi-bold">
                 <a href="/recollections">Recollections</a>
               </li>
               <li className="cursor-pointer text-white uppercase semi-bold">

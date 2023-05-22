@@ -5,6 +5,7 @@ description: "one of our old settlers"
 pubDate: "Feb 9 1934"
 heroImage: "/placeholder-hero.jpg"
 tags: ['obituaries']
+visible: false
 ---
 Death Angel visits our Community again
 

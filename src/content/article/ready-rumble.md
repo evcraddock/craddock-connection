@@ -5,6 +5,7 @@ description: "Devin Craddock - Cage Fight"
 pubDate: "Jan 05 2011"
 heroImage: "/placeholder-hero.jpg"
 tags: ['stories']
+visible: true
 ---
 On Saturday night all of you that live in Oklahoma or the surrounding states are in for a great experience. Devin Jay Craddock will be participating in a cage fight at the Sugar Creek Casino on January 8, 2011 at 8 pm. The casino is located in Hinton, Ok which is about 30 minutes west of Oklahoma City, Ok right off of I-40.
 

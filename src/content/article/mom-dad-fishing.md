@@ -5,6 +5,7 @@ description: "You boys want to go fishing?"
 pubDate: "August 17 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['recollections']
+visible: true
 ---
 My mother was one of a kind. I think the Lord started her out in the hole just to give everyone else a fighting chance. She had a built-in business savvy and an endless supply of fresh ideas for something new to try. And try she did … which kept dad at his wits end most of the time. He was much more laid back and usually content with things the way they were.
 

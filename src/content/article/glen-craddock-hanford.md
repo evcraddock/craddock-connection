@@ -5,6 +5,7 @@ description: "Manhattan Project Hanford B-Reactor"
 pubDate: "Sep 20 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['lore']
+visible: true
 ---
 When we moved to Richland, Washington in 1943 (I was 8 months old) Dad went to work at the Hanford Site, very top secret at the time, as an ironworker.  Since he was a union journeyman, he was hired as a foreman based on the assumption that a journeyman union hand could at least read blueprints, etc.  He worked on the "B-Reactor"; the first fullscale nuclear reactor in the world and the one that produced the plutonium for the "Trinity" test bomb and the Nagasaki bomb.
 

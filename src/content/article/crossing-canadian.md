@@ -5,6 +5,7 @@ description: "family origin in Oklahoma"
 pubDate: "Aug 12 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['lore']
+visible: true
 ---
 In 1901 or 1902 Lon and Ada Craddock set out from Stroud Indian Territory, to start their new married life together. They were heading for Cottonwood Grove, Indian Territory; now Verden Oklahoma. Ada was leaving her family, the Thomas Church's behind.
 

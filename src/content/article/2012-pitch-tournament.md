@@ -5,6 +5,7 @@ description: "recap"
 pubDate: "June 29 2012"
 heroImage: "https://photos.craddock.org/i.php?/upload/2023/04/15/20230415193117-227e8d0c-xx.jpg"
 tags: ['stories', 'reunions', 'pitch']
+visible: true
 ---
 > Winner: Larry Craddock
 

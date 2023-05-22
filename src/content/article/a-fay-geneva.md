@@ -5,6 +5,7 @@ description: "She looks like a Fay Geneva"
 pubDate: "Sep 28 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['Lore']
+visible: true
 ---
 Each year it becomes harder to remember our loved ones that have passed on. Pictures help but what really does it for me are the little stories passed down from those who were there. I remember fondly my great Aunt Fay Finley who was my grandfather Van's sister. My grandfather passed before I was born but Aunt Fay always had a ready supply of stories to tell me about him.
 

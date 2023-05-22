@@ -14,6 +14,7 @@ const article = defineCollection({
     author: z.string(),
     tags: z.array(z.string()),
 		description: z.string(),
+    visible: z.boolean(),
 		// Transform string to Date object
 		pubDate: z
 			.string()

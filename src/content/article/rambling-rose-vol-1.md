@@ -5,7 +5,7 @@ description: "Craddock Connection Ladies"
 pubDate: "Sep 15 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['rambling-rose']
-
+visible: true
 ---
 Several years back some of the sister-in-laws, cousins and nieces began meeting and having a day out each month. This lasted for over a year and we had many good times and went to a lot of our local towns nearby and just enjoyed each other's company. We just sort of fizzled out as we got busy in our own immediate families. We said we would start up again in a few months. Well it turns out to be a few years but here we are. The Ramblin' Roses!
 
