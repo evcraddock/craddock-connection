@@ -4,7 +4,7 @@ author: "Larry Craddock"
 description: "The family newsletter"
 pubDate: "May 21, 2023"
 heroImage: "/placeholder-hero.jpg"
-tags: ['']
+tags: ['news']
 visible: true
 ---
 I was a senior in high school when my father passed away. It was just a few days before Christmas 1968. The family naturally coalesced around my mother, the family matriarch by title and deed. For me, probably my siblings too, there was a period of feeling somewhat unattached after mom passed on Mother's Day, 1987.
