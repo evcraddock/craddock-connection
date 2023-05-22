@@ -25,6 +25,6 @@ _*Check out these memories:*_
 
 Those comments paint a clear picture of the need she saw and how successfully she addressed it. Now it's time for us to step up to the plate and do what we can to keep all these crazy Craddocks CONNECTED! It's amazing that Ada tackled and conquered this almost entirely alone and without the internet.
 
-So ... we're setting up web apps to share everything we can including photos, videos, stories, a Craddock wiki, the original Craddock Connection newsletters AND the NEW Craddock Connection newsletters. You can find EVERYTHING CRADDOCK right here -> https://www.craddock.org
+So ... we're setting up web apps to share everything we can including <a href="https://photos.craddock.org" target="_blank">photos</a>, <a href="https://videos.craddock.org/home" target="_blank">videos</a>, [stories](/articles), <a href="https://wiki.craddock.org" target="_blank">a Craddock wiki</a>, the original Craddock Connection newsletters AND the NEW Craddock Connection newsletters. You can find [a list of all the newsletters here](/newsletters)!
 
 Larry Craddock
