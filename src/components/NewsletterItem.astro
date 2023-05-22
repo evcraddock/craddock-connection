@@ -47,7 +47,7 @@ if (data && data.result && data.result.images.length > 0) {
         class="block lg:w-64 rounded-lg object-cover object-center mb-3"
         src="/craddock-connection-newsletter.png" />
     </a>
-    <a class="xl:hidden" href={post.location}>
+      <a class="xl:hidden" href={`/${post.location}`}>
       <img
         alt="gallery"
         class="block lg:w-64 rounded-lg object-cover object-center mb-3"
@@ -60,7 +60,7 @@ if (data && data.result && data.result.images.length > 0) {
           {truncateString(post.title, 35)}
         </span>
       </a>
-      <a class="xl:hidden" href={post.location}>
+      <a class="xl:hidden" href={`/${post.location}`}>
         <span class="truncate bg-gradient-to-r from-blue-600 to-blue-900 bg-[length:0px_10px] bg-left-bottom duration-500 dark:from-blue-800 dark:to-blue-900">
           {truncateString(post.title, 35)}
         </span>
