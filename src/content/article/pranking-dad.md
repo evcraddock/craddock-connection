@@ -18,8 +18,10 @@ For a year or so, mom regularly took me to Children’s Hospital in OKC. On the 
 
 We couldn’t wait to get home and as soon as we did started carefully poking loads down into cigarettes wherever we found an open pack laying unguarded. At one point, I stumbled across a cigar still wrapped in cellophane and couldn’t resist the challenge. After several minutes of patiently working at it I finally managed to push a cigarette load a good ½ an inch down into the cigar using a toothpick and leaving very little evidence it had been tampered with. We were having so much fun watching our victims’ (mostly dad) reactions to a cigarette exploding in their face that we were always on the lookout for another opportunity.
 
-Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with it.” :)
-<img style="padding: 20px" align="left" width="350" src="https://gallery.craddock.org/_data/i/upload/2023/04/13/20230413072707-5e6f5770-me.jpg"> 
+<img style="padding: 20px" align="left" width="350" src="https://gallery.craddock.org/_data/i/upload/2023/04/13/20230413072707-5e6f5770-me.jpg">
+
+
+Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with it.” :) 
 
 If you’ve ever seen a cigar blow up in the face of a cartoon character then you know exactly what this looked like. We laughed uncontrollably as we ran out the door and I’m pretty sure what I heard was … “you little shits!”
 
