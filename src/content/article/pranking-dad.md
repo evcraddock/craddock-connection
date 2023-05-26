@@ -21,7 +21,7 @@ We couldn’t wait to get home and as soon as we did started carefully poking lo
 <img style="padding: 20px" align="left" width="350" src="https://gallery.craddock.org/_data/i/upload/2023/04/13/20230413072707-5e6f5770-me.jpg">
 
 
-Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with it.” :) 
+Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with this.” :) 
 
 If you’ve ever seen a cigar blow up in the face of a cartoon character then you know exactly what this looked like. We laughed uncontrollably as we ran out the door and I’m pretty sure what I heard was … “you little shits!”
 
