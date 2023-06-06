@@ -5,7 +5,7 @@ description: "The most soft hearted person I've known"
 pubDate: "October 20 2010"
 heroImage: "/placeholder-hero.jpg"
 tags: ['recollections']
-visible: false
+visible: true
 ---
 Dean was the oldest of ten and I guess Larry Dean is right, he developed a sense of responsibility towards all of us right from the start. Funny thing, I never once remember Dean being mad at any of us to the point where angry words were spoken. It may have been different with the boys; Dean always made sure nothing happened around me. He kept me sheltered I suppose.
 
