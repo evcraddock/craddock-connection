@@ -462,7 +462,15 @@ export const newsletters: newsletter[] = [
     title: 'Volume 7 Issue 1',
     author: 'Rodney Craddock',
     publishDate: new Date('May 31, 2023'),
-    location: 'files/newsletters/May-2023-Volume-1.pdf',
+    location: 'files/newsletters/Volume-7-Issue-01.pdf',
+  },
+  { 
+    slug: 'volume-7-2',
+    visible: true,
+    title: 'Volume 7 Issue 2',
+    author: 'Lynne McCafferty',
+    publishDate: new Date('June 09, 2023'),
+    location: 'files/newsletters/Volume-7-Issue-02.pdf',
   }
 
 ]
