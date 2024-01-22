@@ -1,5 +1,5 @@
 ---
-title: "Knight in Shinging Armor"
+title: "Knight in Shining Armor"
 author: "Judy Craddock Smith"
 description: "Judy's memories of her father growing up"
 pubDate: "Oct 07 2010"
