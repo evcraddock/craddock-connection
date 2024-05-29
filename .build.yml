@@ -1,5 +1,5 @@
 image: archlinux
-packages: 
+packages:
   - nodejs
   - npm
   - docker
@@ -11,7 +11,9 @@ secrets:
 tasks:
   - setup: |
       sudo systemctl enable --now docker
-      npm install astro
+
+      echo "INSTALL ASTRO"
+      npm install astro@latest
   - build: |
       cd craddock-connection
       npm install
