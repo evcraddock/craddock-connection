@@ -13,7 +13,7 @@ tasks:
       sudo systemctl enable --now docker
 
       echo "INSTALL ASTRO"
-      case ~/.webhook-url
+      echo ~/.webhook-url
       npm install astro@latest
   - build: |
       cd craddock-connection
