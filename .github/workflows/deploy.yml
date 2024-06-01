@@ -45,4 +45,4 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/craddock-connection:${{ steps.set_image_tag.outputs.image_tag }}
 
       - name: Post to Webhook
-        run: curl --insecure -X POST ${{ secrets.CRADDOCK_WEBHOOK_URL }}?tag=${{ steps.set_image_tag.outputs.image_tag }}
+        run: curl --insecure -X POST https://craddock.org:9443/api/webhooks/5f96a2bd-0e0d-4fc2-8c87-1d214a11e600?tag=${{ steps.set_image_tag.outputs.image_tag }}
