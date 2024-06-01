@@ -48,4 +48,4 @@ jobs:
         run: |
           curl --insecure -X POST -H "Content-Type: application/json" \
           -d '{"text":"Docker image pushed: ${{ secrets.DOCKER_USERNAME }}/craddock-connection:${{ steps.set_image_tag.outputs.image_tag }}"}' \
-          ${{ secrets.WEBHOOK_URL }}?tag=${{ steps.set_image_tag.outputs.image_tag }}
+          ${{ secrets.CRADDOCK_WEBHOOK_URL }}?tag=${{ steps.set_image_tag.outputs.image_tag }}
