@@ -50,6 +50,28 @@ Resources:
         ViewerCertificate:
           CloudFrontDefaultCertificate: true
 
+  CloudFormationExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: S3BucketPolicyPermissions
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetBucketPolicy
+                  - s3:PutBucketPolicy
+                  - s3:DeleteBucketPolicy
+                Resource: !Sub "arn:aws:s3:::${SiteBucket}"
+
 Outputs:
   WebsiteURL:
     Value: !GetAtt SiteBucket.WebsiteURL
@@ -57,3 +79,4 @@ Outputs:
   CloudFrontDomainName:
     Value: !GetAtt CloudFrontDistribution.DomainName
     Description: CloudFront distribution domain name.
+
