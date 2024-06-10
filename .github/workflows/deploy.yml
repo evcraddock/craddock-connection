@@ -35,6 +35,9 @@ jobs:
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aws/aws-sam-cli/develop/installer/pyinstaller/install)" && sam --version
 
+      - name: Sync Website Content to S3
+        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
+
       - name: Package SAM Application
         run: sam package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket ${{ secrets.S3_BUCKET_NAME }}
 
