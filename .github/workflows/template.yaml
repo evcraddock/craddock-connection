@@ -1,0 +1,50 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Simple SAM Template for a static website hosted on S3 and delivered via CloudFront.
+
+Resources:
+  SiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      WebsiteConfiguration:
+        IndexDocument: index.html
+
+  SiteBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref SiteBucket
+      PolicyDocument:
+        Statement:
+          - Sid: PublicReadGetObject
+            Effect: Allow
+            Principal: "*"
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${SiteBucket}/*"
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Origins:
+          - DomainName: !GetAtt SiteBucket.DomainName
+            Id: S3Origin
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+        DefaultCacheBehavior:
+          TargetOriginId: S3Origin
+          ForwardedValues:
+            QueryString: false
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        PriceClass: PriceClass_100
+        ViewerCertificate:
+          CloudFrontDefaultCertificate: true
+
+Outputs:
+  WebsiteURL:
+    Value: !GetAtt SiteBucket.WebsiteURL
+    Description: URL of the website hosted on S3 bucket.
+  CloudFrontDomainName:
+    Value: !GetAtt CloudFrontDistribution.DomainName
+    Description: CloudFront distribution domain name.
