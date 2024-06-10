@@ -38,11 +38,11 @@ jobs:
       - name: Package SAM Application
         run: sam package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket ${{ secrets.S3_BUCKET_NAME }}
 
-      - name: Sync Website Content to S3
-        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
-
       - name: Deploy SAM Application
         run: sam deploy --template-file packaged.yaml --stack-name craddock-org-stack --capabilities CAPABILITY_IAM --no-fail-on-empty-changeset
+
+      - name: Sync Website Content to S3
+        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
       - name: Cleanup Artifacts
         run: rm -rf packaged.yaml
