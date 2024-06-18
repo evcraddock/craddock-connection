@@ -24,25 +24,20 @@ jobs:
       - name: Build Astro.js project
         run: npm run build
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1 # Specify your AWS region
+      - name: Setup CDK
+        run: npm install -g aws-cdk@latest
 
-      - name: Install SAM CLI
-        run: |
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aws/aws-sam-cli/develop/installer/pyinstaller/install)" && sam --version
+      - name: Install CDK dependencies
+        run: cd cdk && npm install
 
-      - name: Package SAM Application
-        run: sam package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket ${{ secrets.S3_BUCKET_NAME }}
+      - name: Bootstrap CDK
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: cd cdk && cdk bootstrap aws://${{ secrets.AWS_ACCOUNT_ID }}/us-east-1
 
-      - name: Deploy SAM Application
-        run: sam deploy --template-file packaged.yaml --stack-name craddock-org-stack --capabilities CAPABILITY_IAM --no-fail-on-empty-changeset
-
-      - name: Sync Website Content to S3
-        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
-
-      - name: Cleanup Artifacts
-        run: rm -rf packaged.yaml
+      - name: Deploy with CDK
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: cd cdk && cdk deploy --require-approval never
