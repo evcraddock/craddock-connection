@@ -1,21 +1,21 @@
-import * as cdk from '@aws-cdk/core';
-import * as s3 from '@aws-cdk/aws-s3';
-import * as cloudfront from '@aws-cdk/aws-cloudfront';
-import * as s3deploy from '@aws-cdk/aws-s3-deployment';
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
+import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 
 export class MyStaticSiteStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // Create an S3 bucket to store the website
     const siteBucket = new s3.Bucket(this, 'SiteBucket', {
       websiteIndexDocument: 'index.html',
       websiteErrorDocument: '404.html',
       publicReadAccess: true,
+      blockPublicAccess: new s3.BlockPublicAccess({ blockPublicAcls: false, blockPublicPolicy: false, ignorePublicAcls: false, restrictPublicBuckets: false }),
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
-    // Create a CloudFront distribution pointing to the S3 bucket
     const distribution = new cloudfront.CloudFrontWebDistribution(this, 'SiteDistribution', {
       originConfigs: [
         {
@@ -27,9 +27,8 @@ export class MyStaticSiteStack extends cdk.Stack {
       ],
     });
 
-    // Deploy the static site to the S3 bucket
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
-      sources: [s3deploy.Source.asset('../dist')],  // Adjusted to point to the parent directory
+      sources: [s3deploy.Source.asset('../dist')],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ['/*'],
