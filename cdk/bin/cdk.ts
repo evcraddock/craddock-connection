@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { MyStaticSiteStack } from '../lib/cdk-stack';
+import { CraddockConnectionStack } from '../lib/cdk-stack';
 
 const app = new cdk.App();
-new MyStaticSiteStack(app, 'MyStaticSiteStack');
+new CraddockConnectionStack(app, 'CraddockConnectionStack');
