@@ -42,15 +42,10 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           cd cdk 
-          output=$(cdk deploy --require-approval never)
-          echo "CDK_OUTPUT=$output" >> $GITHUB_ENV
-
-      - name: Extract Distribution ID
-        id: extract
-        run: |
-          echo "CDK_OUTPUT: ${{ env.CDK_OUTPUT }}"
-          distribution_id=$(echo "${{env.CDK_OUTPUT }}" | grep -oP 'CraddockConnectionStack.CfnOutDistributionId\s*=\s*\K\S+')
+          output=$(cdk deploy --require-approval never 2>&1)
+          distribution_id=$(echo "$output" | grep 'CraddockConnectionStack.CfnOutDistributionId' | cut -d ' ' -f 3)
           echo "DISTRIBUTION_ID=$distribution_id" >> $GITHUB_ENV
+          echo "${{ env.DISTRIBUTION_ID }}"
 
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v1
