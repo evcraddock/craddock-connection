@@ -40,7 +40,17 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: cd cdk && cdk deploy --require-approval never
+        run: |
+          cd cdk 
+          output=$(cdk deploy --require-approval never)
+          echo "CDK_OUTPUT=$output" >> $GITHUB_ENV
+
+      - name: Extract Distribution ID
+        id: extract
+        run: |
+          echo "CDK_OUTPUT: ${{ env.CDK_OUTPUT }}"
+          distribution_id=$(echo "${{env.CDK_OUTPUT }}" | grep -oP 'CraddockConnectionStack.CfnOutDistributionId\s*=\s*\K\S+')
+          echo "DISTRIBUTION_ID=$distribution_id" >> $GITHUB_ENV
 
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v1
@@ -48,6 +58,10 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ env.DISTRIBUTION_ID }} --paths "/*"
 
       - name: Copy Files
         run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete

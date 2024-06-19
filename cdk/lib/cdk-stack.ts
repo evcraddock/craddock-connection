@@ -4,6 +4,7 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as cloudfrontOrigins from 'aws-cdk-lib/aws-cloudfront-origins';
 import { aws_certificatemanager as acm } from 'aws-cdk-lib';
+// import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 
 export class CraddockConnectionStack extends cdk.Stack {
   private cfnOutCloudFrontUrl: cdk.CfnOutput;
@@ -47,6 +48,13 @@ export class CraddockConnectionStack extends cdk.Stack {
       ],
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2019,
     });
+
+    // new s3deploy.BucketDeployment(this, 'CraddockConnectionBucketDeployment', {
+    //   sources: [s3deploy.Source.asset('../dist')],
+    //   destinationBucket: siteBucket,
+    //   distribution: distribution,
+    //   distributionPaths: ['/*'],
+    // });
 
     this.cfnOutCloudFrontUrl = new cdk.CfnOutput(this, "CfnOutCloudFrontUrl", {
       value: `https://${distribution.distributionDomainName}`,
