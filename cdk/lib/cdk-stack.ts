@@ -15,6 +15,7 @@ export class CraddockConnectionStack extends cdk.Stack {
 
     const siteBucket = new s3.Bucket(this, 'SiteBucket', {
       bucketName: 'craddock-connection',
+      websiteIndexDocument: 'index.html',
       publicReadAccess: false,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
@@ -39,10 +40,10 @@ export class CraddockConnectionStack extends cdk.Stack {
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2019,
     });
 
-    new s3deploy.BucketDeployment(this, 'CraddockConnectionBucketDeployment', {
-      sources: [s3deploy.Source.asset('../dist')],
-      destinationBucket: siteBucket,
-    });
+    // new s3deploy.BucketDeployment(this, 'CraddockConnectionBucketDeployment', {
+    //   sources: [s3deploy.Source.asset('../dist')],
+    //   destinationBucket: siteBucket,
+    // });
 
     this.cfnOutCloudFrontUrl = new cdk.CfnOutput(this, "CfnOutCloudFrontUrl", {
       value: `https://${distribution.distributionDomainName}`,
