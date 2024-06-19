@@ -4,7 +4,7 @@ author: "Lynne McCafferty"
 description: "riding with Grandma Lucille"
 pubDate: "Aug 19 2010"
 heroImage: "/placeholder-hero.jpg"
-tags: ['Recollections']
+tags: ['recollections']
 visible: true
 ---
 I spent a lot of my time at Grandma Lucille's house between the years of 1973 - 1976. I remember that Doug and Angie lived there. Grandma worked a lot, so I stayed at her house and watched them for her. They really didn't need me to since Grandma was only a few yards away. Anyway, one winter I remember Grandma getting us up early so we could have biscuits and gravy, eggs, bacon, toast and jam, she always seemed to fix the biggest meals you've ever seen, and don't think it went to waste. By the time she kindly offered you the last little bit in the bowl, you knew you were going to burst.

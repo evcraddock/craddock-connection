@@ -4,7 +4,7 @@ author: "Judy Craddock Smith"
 description: "Judy's memories of her father growing up"
 pubDate: "Oct 07 2010"
 heroImage: "/placeholder-hero.jpg"
-tags: ['Recollections']
+tags: ['recollections']
 visible: true
 ---
 One of my fondest childhood memories, is living way up on a hill south of Gracemont, Ok. We had a big house that overlooked the valley where dad herded cattle. Around noon each day I would watch anxiously,waiting for him to top that hill sitting so tall in the saddle on a white stallion. He was like a real knight in shining armor just like the story books. He would be grinning so big because he knew he had a welcoming committee.

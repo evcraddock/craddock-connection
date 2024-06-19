@@ -3,7 +3,7 @@ import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as cloudfrontOrigins from 'aws-cdk-lib/aws-cloudfront-origins';
-import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
+import { aws_certificatemanager as acm } from 'aws-cdk-lib';
 
 export class CraddockConnectionStack extends cdk.Stack {
   private cfnOutCloudFrontUrl: cdk.CfnOutput;
@@ -12,6 +12,8 @@ export class CraddockConnectionStack extends cdk.Stack {
 
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+    const certificatArn = 'arn:aws:acm:us-east-1:648035311088:certificate/884a2a78-fc1b-44e3-ad6b-0cc389e5e7fb';
+    const certificate = acm.Certificate.fromCertificateArn(this, 'Certificate', certificatArn);
 
     const siteBucket = new s3.Bucket(this, 'SiteBucket', {
       bucketName: 'craddock-connection',
@@ -22,12 +24,18 @@ export class CraddockConnectionStack extends cdk.Stack {
     });
 
     const distribution = new cloudfront.Distribution(this, 'CraddockConnectionDistribution', {
+      domainNames: ['craddock.org', 'www.craddock.org'],
       defaultBehavior: {
         allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
         compress: true,
-        origin: new cloudfrontOrigins.S3Origin(siteBucket),
+        origin: new cloudfrontOrigins.HttpOrigin(siteBucket.bucketWebsiteDomainName, {
+          protocolPolicy: cloudfront.OriginProtocolPolicy.HTTP_ONLY,
+          httpPort: 80,
+          httpsPort: 443
+        }),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
+      certificate: certificate,
       defaultRootObject: 'index.html',
       errorResponses: [
         {
@@ -39,11 +47,6 @@ export class CraddockConnectionStack extends cdk.Stack {
       ],
       minimumProtocolVersion: cloudfront.SecurityPolicyProtocol.TLS_V1_2_2019,
     });
-
-    // new s3deploy.BucketDeployment(this, 'CraddockConnectionBucketDeployment', {
-    //   sources: [s3deploy.Source.asset('../dist')],
-    //   destinationBucket: siteBucket,
-    // });
 
     this.cfnOutCloudFrontUrl = new cdk.CfnOutput(this, "CfnOutCloudFrontUrl", {
       value: `https://${distribution.distributionDomainName}`,

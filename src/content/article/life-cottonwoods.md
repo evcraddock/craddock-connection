@@ -4,7 +4,7 @@ author: "Lynne McCafferty"
 description: "only girl with 6 brothers"
 pubDate: "Jun 05 2023"
 heroImage: "/placeholder-hero.jpg"
-tags: ['Recollections']
+tags: ['recollections']
 visible: true
 ---
 Growing up it was easy to take for granted the sun drenched red earth of Oklahoma and the  towering cottonwoods that sprung out of the ground like massive, leafy skyscrapers. For me, this was my city, my terrain and my fortress.  I spent many a day with my bare feet in the red dirt, knees and elbows scuffed from scaling those red rock banks and rough bark of the cottonwoods as I carefully climbed to the spot where I could overlook the landscape; Taking it all in and working through life’s biggest issues. Which, for a young girl (the only girl) usually pertained to school fiascos and spying on my brothers. After all, you just never knew when you’d need that one itty bitty detail to hold over their heads just so you got to ride in the front seat of the truck and not sit in the back all the way to town. 
