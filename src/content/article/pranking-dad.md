@@ -4,7 +4,7 @@ author: "Larry Craddock"
 description: "Pranking dad ..."
 pubDate: "August 30 2010"
 heroImage: "/placeholder-hero.jpg"
-images: [van-larry-joe-lucille.png, lucille-van-craddock.jpg, larry-bar.jpg, larry-indian-shirt.jpg]
+images: [van-larry-joe-lucille.png, lucille-van-craddock.jpg, larry-bar.jpg, larry-indian-shirt.jpg, van-craddock.jpg]
 tags: ['recollections']
 visible: true
 ---
@@ -18,9 +18,6 @@ For as long as I can remember I’ve had a condition that a doctor compared to c
 For a year or so, mom regularly took me to Children’s Hospital in OKC. On the walk back to the parking lot we usually stopped in a little corner drug store that had lots of other stuff like comic books, candy, and of all things prank items! On one occasion Joe (my 1 ½ year younger brother) and I managed to persuade mom to let us buy some so we each bought a box of cigarette loads; the exploding type.
 
 We couldn’t wait to get home and as soon as we did started carefully poking loads down into cigarettes wherever we found an open pack laying unguarded. At one point, I stumbled across a cigar still wrapped in cellophane and couldn’t resist the challenge. After several minutes of patiently working at it I finally managed to push a cigarette load a good ½ an inch down into the cigar using a toothpick and leaving very little evidence it had been tampered with. We were having so much fun watching our victims’ (mostly dad) reactions to a cigarette exploding in their face that we were always on the lookout for another opportunity.
-
-<img style="padding: 20px" align="left" width="350" src="https://gallery.craddock.org/_data/i/upload/2023/04/13/20230413072707-5e6f5770-me.jpg">
-
 
 Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with this.” :)
 
