@@ -4,6 +4,7 @@ author: "The Verden News"
 description: "Grandma Craddock"
 pubDate: "Sep 15, 1922"
 heroImage: "/placeholder-hero.jpg"
+images: [laura-carby-craddock.png]
 tags: ['obituaries']
 visible: true
 ---
@@ -38,4 +39,3 @@ Words cannot express our appreciation of those friends who have shared with us t
 * W B Hinkle and wife
 * Alonzo Craddock
 * Mrs J A Galloway
-

@@ -4,13 +4,14 @@ author: "Larry Craddock"
 description: "Pranking dad ..."
 pubDate: "August 30 2010"
 heroImage: "/placeholder-hero.jpg"
+images: [van-larry-joe-lucille.png, lucille-van-craddock.jpg, larry-bar.jpg, larry-indian-shirt.jpg]
 tags: ['recollections']
 visible: true
 ---
 Me and Joe and cigarette loads …
 
 I’m sure I’ve already explained my chronological handicap so I’m now officially invoking that as a waiver concerning the accuracy of all dates used in this story.
-Having said that I believe this took place sometime between 1962 and 1964. 
+Having said that I believe this took place sometime between 1962 and 1964.
 
 For as long as I can remember I’ve had a condition that a doctor compared to calluses on my vocal cords. It causes my voice to sound raspy and unpleasant. My mom, knowing it bothered me, tried numerous times to find someone who could correct it. That didn’t happen but lots of other stuff did … including this.
 
@@ -21,7 +22,7 @@ We couldn’t wait to get home and as soon as we did started carefully poking lo
 <img style="padding: 20px" align="left" width="350" src="https://gallery.craddock.org/_data/i/upload/2023/04/13/20230413072707-5e6f5770-me.jpg">
 
 
-Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with this.” :) 
+Meanwhile, dad was beginning to lose patience with us and finally after having tobacco blown up his nose for the umpteenth time announced “OK boys! That’s enough of that.” And just as we were about to leave, disappointed that our fun was finally over we stopped, turned around, and sat quietly on the couch after he said “I’ll just smoke this cigar … I know you haven’t messed with this.” :)
 
 If you’ve ever seen a cigar blow up in the face of a cartoon character then you know exactly what this looked like. We laughed uncontrollably as we ran out the door and I’m pretty sure what I heard was … “you little shits!”
 

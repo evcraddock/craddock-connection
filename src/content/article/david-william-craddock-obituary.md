@@ -4,6 +4,7 @@ author: "The Verden News"
 description: "a man of strong conviction"
 pubDate: "May 2, 1913"
 heroImage: "/placeholder-hero.jpg"
+images: ["david-craddock.png"]
 tags: ['obituaries']
 visible: true
 ---
@@ -24,11 +25,3 @@ David W. Craddock was a man of strong convictions, a firm advocate and worker fo
 The funeral was held at the residence Monday afternoon, Rev. P. F. Harman of the Baptist church delivering the sermon and the remains were laid to rest in the Verden cemetery by the I. O. O. F. lodge of Verden of which order he has been a member for many years.
 
 The News joins in extending sympathy to the widow and family in their sad bereavement.
-
-
-
-
-
-
-
-

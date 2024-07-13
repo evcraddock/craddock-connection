@@ -1,61 +1,60 @@
 ---
-import { getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
+import { getCollection } from "astro:content";
+import BlogPost from "../../layouts/BlogPost.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
 
 export async function getStaticPaths() {
-	const posts = await getCollection('article');
-	return posts.map((post) => ({
-    params: { slug: post.slug },
-		props: post,
-	}));
+    const posts = await getCollection("article");
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: post,
+    }));
 }
 
 const post = Astro.props;
 const { slug } = Astro.params;
 
-const data = await fetch(`https://photos.craddock.org/ws.php?format=json&method=pwg.tags.getImages&tag_name=${slug}&order=name`).then((response) => response.json());
-
-let images = [];
-const heroImage = {
-  location: null,
-  name: '',
-}
-
-if (data && data.result && data.result.images.length > 0) {
-  heroImage.location = data.result.images[0].derivatives.large.url || '';
-  heroImage.name = data.result.images[0].name;
-  images = data.result.images;
-}
-
 const postProps = {
-  ...post.data,
-  slug: post.slug,
-  images: images,
+    ...post.data,
+    slug: post.slug,
+    images: post.data.images,
+};
+
+function findTitleImage(images: string[], slug: string): string | undefined {
+    const titleImage = images[0];
+    return titleImage ? `/images/${slug}/${titleImage}` : undefined;
 }
+
+const heroImage = findTitleImage(post.data.images, slug) || "/no-image.png";
 
 const { Content } = await post.render();
 ---
+
 <BlogPost {...postProps}>
-  <div class="mb-2">
-      {heroImage && 
-        <img class="mb-0" src={heroImage.location} alt={heroImage.name} />
-      }
-      { !post.data.pubDate && 
-        <FormattedDate date={post.data.pubDate} />
-        <hr class="mb-4 mt-4" />
-      }
-  </div>
-	<h2 class="mt-8 mb-2">{post.data.title}</h2>
-  <h5>
-    {post.data.author && 
-      <span>by {post.data.author} </span>
-    }
-    {post.data.pubDate &&
-    <span> - <FormattedDate date={post.data.pubDate} /></span>
-    }
-  </h5>
-  <a href="javascript:history.back()"><< back</a>
-  <hr class="mb-2 mt-2" />
-	<Content />
+    <div class="mb-2">
+        <img class="mb-0" src={heroImage} />
+        {
+            !post.data.pubDate && (
+                <>
+                    <FormattedDate date={post.data.pubDate} />
+                    <hr class="mb-4 mt-4" />
+                </>
+            )
+        }
+    </div>
+    <h2 class="mt-8 mb-2">{post.data.title}</h2>
+    <h5>
+        {post.data.author && <span>by {post.data.author} </span>}
+        {
+            post.data.pubDate && (
+                <span>
+                    {" "}
+                    - <FormattedDate date={post.data.pubDate} />
+                </span>
+            )
+        }
+    </h5>
+    <a href="javascript:history.back()"><< back</a>
+    <hr class="mb-2 mt-2" />
+    <Content />
 </BlogPost>

@@ -4,6 +4,7 @@ author: "Erik Craddock"
 description: "Devin Craddock - Cage Fight"
 pubDate: "Jan 05 2011"
 heroImage: "/placeholder-hero.jpg"
+images: [rumble-1.jpg, rumble-2.jpg, rumble-3.jpg, rumble-4.jpg]
 tags: ['stories']
 visible: true
 ---

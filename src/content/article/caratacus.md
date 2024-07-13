@@ -3,7 +3,9 @@ title: "Caratacus - the first craddock"
 author: "Erik Craddock"
 description: "the first craddock"
 pubDate: "Oct 18 2010"
-heroImage: "/placeholder-hero.jpg"
+images: [
+  'caratacus.png'
+]
 tags: ['lore']
 visible: true
 ---

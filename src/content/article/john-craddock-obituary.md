@@ -4,6 +4,7 @@ author: "The Verden News"
 description: "one of our old settlers"
 pubDate: "Feb 9 1934"
 heroImage: "/placeholder-hero.jpg"
+images: [young-john-craddock.jpeg, john-craddock.jpeg, john_craddock_family.jpg]
 tags: ['obituaries']
 visible: true
 ---
@@ -15,7 +16,7 @@ Mr. Craddock was born December 22, 1869 in Grayson county, Kentucky, and departe
 
 He resided a few years in Alberta, Canada and was united in marriage to Miss Rosetta Jackson, in LaCombe, Alberta, Canada. To this union was born eleven children. All living except on daughter, Elnora, who proceeded him in death, August 13, 1921 at the age of two and one half years.
 
-He leaves to mourn his loss, a wife and ten children, Mrs Ruby Rhodes, Wlibur, Alta Kuykendall, Levi, Velma Kees, June Campbell, Alonzo, Herbert. All living near Verden besides one brother Alonzo S. Craddock of Anadarko, and a sister Mrs. Elizabeth Galloway of Elmonta California. He also leaves eight grandchildren and many other relatives and friends. 
+He leaves to mourn his loss, a wife and ten children, Mrs Ruby Rhodes, Wlibur, Alta Kuykendall, Levi, Velma Kees, June Campbell, Alonzo, Herbert. All living near Verden besides one brother Alonzo S. Craddock of Anadarko, and a sister Mrs. Elizabeth Galloway of Elmonta California. He also leaves eight grandchildren and many other relatives and friends.
 
 Mr. Craddock has been ailing a few years but was only taken seriously ill with heart trouble a week previous to his death.
 

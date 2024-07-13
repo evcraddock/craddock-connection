@@ -4,6 +4,7 @@ author: "Lynne McCafferty"
 description: "riding with Grandma Lucille"
 pubDate: "Aug 19 2010"
 heroImage: "/placeholder-hero.jpg"
+images: [grandma-lucille.png, Lynne-Angie.jpg, lucille.jpg]
 tags: ['recollections']
 visible: true
 ---
@@ -17,4 +18,3 @@ Once we got to the car, I piled into the front seat with Grandma and Doug and An
 Once we got down the road a ways by the Church of God, we started to slide a little bit. This terrified us all, and I remember vividly Grandma saying "Oh my goodness, you kids hang on we're headed for the ditch". Her knuckles whiter than ever, her hands hanging onto the wheel and her leg straight as she pushed on the brake. I'll never forget the 2 full circles we did right in the highway going a blazing 3 miles per hour. We stopped nicely into the drive of one of the homes just off of highway 281. Grandma turned around and true to form said "It's a good thing we didn't go into that ditch, or somebody would've broken their necks." All of us kids busted out laughing. Grandma had a grin on her face too. We slowly made our way to the school and bustled out of the car with Grandma telling us to hang on to one another til we got to the school. She didn't say it but we knew she was thinking "or you'll break you necks".
 
 Sure miss those days of carefree abandon and the beautiful and caring woman that let me know I was loved more than anything.
-

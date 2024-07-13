@@ -8,8 +8,13 @@ import SocialMedia from '../components/SocialMedia.astro';
 import Footer from '../components/Footer.astro';
 
 const { title, description, images, slug } = Astro.props;
-const photosUrl = `https://photos.craddock.org/index.php?/tags/${slug.replaceAll("-", "_")}`;
-const heroImage = (images == '' || images == null) ? null : images[0].derivatives.small.url;
+const titleImage = images.find(image => image.startsWith('title'));
+function findTitleImage(images: string[], slug: string): string | undefined {
+  const titleImage = images.find(image => image.endsWith('title.jpg'));
+  return titleImage ? `/images/${slug}/${titleImage}` : undefined;
+}
+
+const heroImage = findTitleImage(images, slug) || '/no-image.png';
 ---
 
 <html lang="en">
@@ -28,9 +33,7 @@ const heroImage = (images == '' || images == null) ? null : images[0].derivative
       <aside class="w-full md:w-1/4 flex flex-col items-center px-3">
         <Wiki />
         <SocialMedia />
-        { images && images.length > 1 && (
-          <PhotoGallery images={images} photosUrl={photosUrl} /> 
-        )}
+          <PhotoGallery images={images} slug={slug} /> 
       </aside>
 		<Footer />
 		</main>

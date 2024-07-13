@@ -41,7 +41,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          cd cdk 
+          cd cdk
           output=$(cdk deploy --require-approval never 2>&1)
           distribution_id=$(echo "$output" | grep 'CraddockConnectionStack.CfnOutDistributionId' | cut -d ' ' -f 3)
           echo "DISTRIBUTION_ID=$distribution_id" >> $GITHUB_ENV
@@ -60,3 +60,6 @@ jobs:
 
       - name: Copy Files
         run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
+
+      - name: Copy Images Files
+        run: aws s3 sync ./dist s3://${{ secrets.S3_IMAGES_BUCKET_NAME }} --delete

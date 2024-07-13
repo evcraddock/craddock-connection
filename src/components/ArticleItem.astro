@@ -1,79 +1,110 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
-import { truncateString } from '../utils';
-import FormattedDate from '../components/FormattedDate.astro';
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { truncateString } from "../utils";
+import FormattedDate from "../components/FormattedDate.astro";
 
 interface Props {
-  post: CollectionEntry<'article'>;
+    post: CollectionEntry<"article">;
 }
 
 interface Author {
-  name: string,
-  image: string,
+    name: string;
+    image: string;
 }
 
-const { post  } = Astro.props;
-const authors = await getCollection('author');
-const articleAuthor = authors.find((a) => post.data.author != '' && a.data.name == post.data.author)
+const { post } = Astro.props;
+const authors = await getCollection("author");
+const articleAuthor = authors.find(
+    (a) => post.data.author != "" && a.data.name == post.data.author,
+);
 let author: Author = {
-  name: 'Unknown Author',
-  image: '',
-}
+    name: "Unknown Author",
+    image: "",
+};
 
 if (articleAuthor != null) {
-  author = articleAuthor.data;
+    author = articleAuthor.data;
 }
 
-const data = await fetch(`https://photos.craddock.org/ws.php?format=json&method=pwg.tags.getImages&tag_name=${post.slug}&order=name`).then((response) => response.json());
+function findTitleImage(images: string[], slug: string): string | undefined {
+    // const titleImage = images.find(image => image.startsWith('title'));
+    const titleImage = images[0];
+    return titleImage ? `/images/${slug}/${titleImage}` : undefined;
+}
 
 const heroImage = {
-  location: '/no-image.png',
-  name: 'no image',
-}
+    location: findTitleImage(post.data.images, post.slug),
+    name: "no image",
+};
 
-if (data && data.result && data.result.images.length > 0) {
-  heroImage.location = data.result.images[0].derivatives.xsmall.url;
-  heroImage.name = data.result.images[0].name;
-}
-
+// if (data && data.result && data.result.images.length > 0) {
+//   heroImage.location = data.result.images[0].derivatives.xsmall.url;
+//   heroImage.name = data.result.images[0].name;
+// }
 ---
-<div class="flex lg:w-1/2 xl:w-1/3 flex-wrap group cursor-pointer mt-0">
-  <div class="w-full xl:p-2 lg:p-3 md:p-0 mb-0">
-    <a href={`/articles/${post.slug}`} >
-      <img
-        alt="gallery"
-        class="block lg:h-64 rounded-lg object-cover object-center mb-3"
-        src={heroImage.location} />
-    </a>
-    <h2 class="text-lg mb-0 font-semibold leading-snug tracking-tight mt-0 dark:text-white">
-      <a href={`/articles/${post.slug}`}>
-        <span class="truncate bg-gradient-to-r from-blue-600 to-blue-900 bg-[length:0px_10px] bg-left-bottom duration-500 dark:from-blue-800 dark:to-blue-900">
-          {truncateString(post.data.title, 35)}
-        </span>
-      </a>
-    </h2>
-    <div>
-    <span class="flex items-center space-x-3">
-      { post.data.tags && post.data.tags.map((tag: any) => {
-        return (
-        <a href={`/${tag}/`}>
-          <span class="inline-block text-xs font-medium tracking-wider uppercase mt-0 text-blue-600">{tag}</span>
-        </a>
-        )})
-      }
-    </span>
-    <span class="mt-0 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
-      <span class="flex items-center gap-1 h-1">
-      { author.image !== '' && (
-        <img alt="" loading="lazy" decoding="async" data-nimg="fill" class="h-5 w-5 rounded-full object-cover" src={author.image} />
-      )}
-      <span class="hidden xl:block truncate text-sm">{truncateString(post.data.author, 15)}</span>
-        <span class="hidden xl:block pl-2 text-xs text-gray-300 dark:text-gray-600">-</span>
-      </span>
-      <FormattedDate date={post.data.pubDate} />
-    </span>
-    </div>
-  </div>
-</div>
 
+<div class="flex lg:w-1/2 xl:w-1/3 flex-wrap group cursor-pointer mt-0">
+    <div class="w-full xl:p-2 lg:p-3 md:p-0 mb-0">
+        <a href={`/articles/${post.slug}`}>
+            <img
+                alt="gallery"
+                class="block lg:h-64 rounded-lg object-cover object-center mb-3"
+                src={heroImage.location}
+            />
+        </a>
+        <h2
+            class="text-lg mb-0 font-semibold leading-snug tracking-tight mt-0 dark:text-white"
+        >
+            <a href={`/articles/${post.slug}`}>
+                <span
+                    class="truncate bg-gradient-to-r from-blue-600 to-blue-900 bg-[length:0px_10px] bg-left-bottom duration-500 dark:from-blue-800 dark:to-blue-900"
+                >
+                    {truncateString(post.data.title, 35)}
+                </span>
+            </a>
+        </h2>
+        <div>
+            <span class="flex items-center space-x-3">
+                {
+                    post.data.tags &&
+                        post.data.tags.map((tag: any) => {
+                            return (
+                                <a href={`/${tag}/`}>
+                                    <span class="inline-block text-xs font-medium tracking-wider uppercase mt-0 text-blue-600">
+                                        {tag}
+                                    </span>
+                                </a>
+                            );
+                        })
+                }
+            </span>
+            <span
+                class="mt-0 flex items-center space-x-3 text-gray-500 dark:text-gray-400"
+            >
+                <span class="flex items-center gap-1 h-1">
+                    {
+                        author.image !== "" && (
+                            <img
+                                alt=""
+                                loading="lazy"
+                                decoding="async"
+                                data-nimg="fill"
+                                class="h-5 w-5 rounded-full object-cover"
+                                src={author.image}
+                            />
+                        )
+                    }
+                    <span class="hidden xl:block truncate text-sm"
+                        >{truncateString(post.data.author, 15)}</span
+                    >
+                    <span
+                        class="hidden xl:block pl-2 text-xs text-gray-300 dark:text-gray-600"
+                        >-</span
+                    >
+                </span>
+                <FormattedDate date={post.data.pubDate} />
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,16 +1,16 @@
 ---
-const { images, photosUrl } = Astro.props;
+const { images, slug } = Astro.props;
 ---
 <div class="w-full bg-white shadow flex flex-col my-4 p-6">
     <p class="text-xl font-semibold pb-5">Photos</p>
     <div class="grid grid-cols-3 gap-3">
         { images && images.map((a: any) => {
           return (
-            <img class="hover:opacity-75" src={a.derivatives.small.url} />
+            <a href={`/images/${slug}/${a}`} target="_new">
+            <img class="hover:opacity-75" src={`/images/${slug}/${a}`} />
+            </a>
           )
         })}
     </div>
-    <a href={photosUrl} target="_blank" class="w-full bg-blue-600 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
-        See More Images
-    </a>
 </div>
+

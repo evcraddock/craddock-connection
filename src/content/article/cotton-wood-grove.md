@@ -3,7 +3,11 @@ title: "Cottonwood Grove"
 author: "Erik Craddock"
 description: "settling in Verden, Ok"
 pubDate: "Aug 21 2010"
-heroImage: "/placeholder-hero.jpg"
+images: [
+  'cottonwood-grove-jail.png',
+  'house-alonzo-built.jpg',
+  'erik-jailed.jpg'
+]
 tags: ['lore']
 visible: true
 ---

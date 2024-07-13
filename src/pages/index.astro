@@ -1,45 +1,66 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import ArticlesList from '../components/ArticlesList.astro';
+import Layout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import ArticlesList from "../components/ArticlesList.astro";
 
-const articles = await getCollection('article')
+const articles = await getCollection("article");
 
 const posts = await Promise.all(articles);
 posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
-<Layout
-  title={SITE_TITLE}
-  description={SITE_DESCRIPTION}
->
-		<main>
-      <h2 class="mt-4">Welcome</h2>
-			<p>
-      This is the place to keep up with the Craddock Family. 
-			</p>
-      <p>
-      Our goal is to create a place that will make it easy to stay connected with everyone. The plan is to publish stories about aunts and uncles, cousins, grandparents etc, as well as other projects. We hope to get everyone involved. If you have something to contribute please send it to us at <a href="mailto:connection@craddock.org">connection@craddock.org</a>.
-			</p>
-      <h3 class="mb-0">Most Recent Articles</h3>
-      <ArticlesList posts={posts} size={3} />
-      <div class="mt-10 bg-gray-100 px-2 py-0 flex justify-center">
-        <a href="/articles" class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white no-underline">
-          View More Articles
-        </a>
-      </div>
-      <p>
-        We also are working on several different projects that might be interesting to some of you.
-      </p>
-			<ul class="bg-blue-200 py-4">
-        <li><a href="https://wiki.craddock.org" target="_blank">Craddock Family Wiki</a> - Coming Soon!</li>
-        <li><a href="https://videos.craddock.org/home" target="_blank">Craddock Family Videos</a></li>
-        <li><a href="https://photos.craddock.org" target="_blank">Craddock Family Photo Repository</a></li>
-        <li><a href="/newsletters/">Craddock Connection Newsletters</a></li>
-        <li>We have a <a href="https://www.facebook.com/groups/craddockmorris" target="_blank">Family Facebook group</a> with more social networks coming</li>
-			</ul>
-      <p>
-      We are just getting started, so expect some hiccups along the way. Email us at <a href="mailto:connection@craddock.org">connection@craddock.org</a> if something isn't working as expected. Also feel free to make suggestions. There is a lot of work to be done. If you want to help reach out to use either through the <a href="https://www.facebook.com/groups/craddockmorris" target="_blank">Facebook group</a> or the email address above.
-      </p>
-		</main>
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+    <main>
+        <h2 class="mt-4">Welcome</h2>
+        <p>This is the place to keep up with the Craddock Family.</p>
+        <p>
+            Our goal is to create a place that will make it easy to stay
+            connected with everyone. The plan is to publish stories about aunts
+            and uncles, cousins, grandparents etc, as well as other projects. We
+            hope to get everyone involved. If you have something to contribute
+            please send it to us at <a href="mailto:connection@craddock.org"
+                >connection@craddock.org</a
+            >.
+        </p>
+        <h3 class="mb-0">Most Recent Articles</h3>
+        <ArticlesList posts={posts} size={3} />
+        <div class="mt-10 bg-gray-100 px-2 py-0 flex justify-center">
+            <a
+                href="/articles"
+                class="relative block rounded bg-transparent px-3 py-1.5 text-xl text-blue-600 transition-all duration-300 hover:bg-blue-100 dark:text-blue dark:hover:bg-blue-700 dark:hover:text-white no-underline"
+            >
+                View More Articles
+            </a>
+        </div>
+        <p>
+            We also are working on several different projects that might be
+            interesting to some of you.
+        </p>
+        <ul class="bg-blue-200 py-4">
+            <li>
+                <a
+                    href="https://www.youtube.com/@craddockconnection/videos"
+                    target="_blank">Craddock Family Videos</a>
+            </li>
+            <li><a href="/newsletters/">Craddock Connection Newsletters</a></li>
+            <li>
+                We have a <a
+                    href="https://www.facebook.com/groups/craddockmorris"
+                    target="_blank">Family Facebook group</a
+                > with more social networks coming
+            </li>
+        </ul>
+        <p>
+            We are just getting started, so expect some hiccups along the way.
+            Email us at <a href="mailto:connection@craddock.org"
+                >connection@craddock.org</a
+            > if something isn't working as expected. Also feel free to make suggestions.
+            There is a lot of work to be done. If you want to help reach out to use
+            either through the <a
+                href="https://www.facebook.com/groups/craddockmorris"
+                target="_blank">Facebook group</a
+            > or the email address above.
+        </p>
+    </main>
 </Layout>

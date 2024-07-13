@@ -8,5 +8,13 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   site: 'https://craddock.org',
-  integrations: [mdx(), sitemap(), tailwind(), react(), icon()]
+  integrations: [mdx(), sitemap(), tailwind(), react(), icon()],
+  vite: {
+    resolve: {
+      alias: {
+        '/images': '/images',
+      }
+    }
+  }
+
 });
