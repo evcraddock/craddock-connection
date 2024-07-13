@@ -1,41 +1,46 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import PhotoGallery from '../components/PhotoGallery.astro';
-import Wiki from '../pages/wiki.astro';
-import SocialMedia from '../components/SocialMedia.astro';
-import Footer from '../components/Footer.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import PhotoGallery from "../components/PhotoGallery.astro";
+import Wiki from "../pages/wiki.astro";
+import SocialMedia from "../components/SocialMedia.astro";
+import Footer from "../components/Footer.astro";
 
 const { title, description, images, slug } = Astro.props;
-const titleImage = images.find(image => image.startsWith('title'));
 function findTitleImage(images: string[], slug: string): string | undefined {
-  const titleImage = images.find(image => image.endsWith('title.jpg'));
-  return titleImage ? `/images/${slug}/${titleImage}` : undefined;
+    if (!images || !slug) {
+        return undefined;
+    }
+
+    const titleImage = images[0];
+    return titleImage ? `/images/${slug}/${titleImage}` : undefined;
 }
 
-const heroImage = findTitleImage(images, slug) || '/no-image.png';
+const heroImage = findTitleImage(images, slug) || "/no-image.png";
 ---
 
 <html lang="en">
-	<head>
-    <BaseHead title={title} description={description} image={heroImage} />
-	</head>
+    <head>
+        <BaseHead title={title} description={description} image={heroImage} />
+    </head>
 
-  <body>
-    <Header />
-		<main class="container h-screen mx-auto flex flex-wrap py-1">
-      <section class="w-full md:w-3/4 flex flex-col px-3">
-        <article class="max-w-screen-xl h-full prose prose-headings:h-8 prose-p:text-lg ">
-			  	  <slot />
-			    </article>
-      </section>
-      <aside class="w-full md:w-1/4 flex flex-col items-center px-3">
-        <Wiki />
-        <SocialMedia />
-          <PhotoGallery images={images} slug={slug} /> 
-      </aside>
-		<Footer />
-		</main>
-	</body>
+    <body>
+        <Header />
+        <main class="container h-screen mx-auto flex flex-wrap py-1">
+            <section class="w-full md:w-3/4 flex flex-col px-3">
+                <article
+                    class="max-w-screen-xl h-full prose prose-headings:h-8 prose-p:text-lg"
+                >
+                    <slot />
+                </article>
+            </section>
+            <aside class="w-full md:w-1/4 flex flex-col items-center px-3">
+                <Wiki />
+                <SocialMedia />
+                <PhotoGallery images={images} slug={slug} />
+            </aside>
+            <Footer />
+        </main>
+    </body>
 </html>

@@ -1,25 +1,24 @@
 ---
-import BlogPost from '../../layouts/BlogPost.astro';
-import { newsletter, newsletters } from '../../content/newsletters';
+import BlogPost from "../../layouts/BlogPost.astro";
+import { newsletter, newsletters } from "../../content/newsletters";
 
 export async function getStaticPaths() {
-  return newsletters.map((letter: newsletter) => ({
-    params: { slug: letter.slug },
-    props: letter,
-  }));
+    return newsletters.map((letter: newsletter) => ({
+        params: { slug: letter.slug },
+        props: letter,
+    }));
 }
 
 const post = Astro.props;
 const { slug } = Astro.params;
 
 const postProps = {
-  ...post.data,
-  slug: post.slug,
-}
-
-
+    ...post.data,
+    slug: post.slug,
+};
 ---
+
 <BlogPost {...postProps}>
-  <a href="javascript:history.back()"><< back</a>
-  <iframe src={`/${post.location}`} class="w-full h-full"></iframe>
+    <a href="javascript:history.back()"><< back</a>
+    <iframe src={`/${post.location}`} class="w-full h-full"></iframe>
 </BlogPost>
