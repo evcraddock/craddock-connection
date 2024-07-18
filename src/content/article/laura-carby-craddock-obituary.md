@@ -3,7 +3,6 @@ title: "Laura Jane (Carby) Craddock"
 author: "The Verden News"
 description: "Grandma Craddock"
 pubDate: "Sep 15, 1922"
-heroImage: "/placeholder-hero.jpg"
 images: [laura-carby-craddock.png]
 tags: ['obituaries']
 visible: true

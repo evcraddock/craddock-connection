@@ -3,7 +3,6 @@ title: "The Craddock Connection"
 author: "Larry Craddock"
 description: "The family newsletter"
 pubDate: "May 21, 2023"
-heroImage: "/placeholder-hero.jpg"
 images: [
   'ada-faye.png'
 ]

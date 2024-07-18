@@ -3,7 +3,6 @@ title: "Tell your own story"
 author: "Erik Craddock"
 description: "your children will thank you"
 pubDate: "May 12, 2023"
-heroImage: "/articles/verden-jail.jpg"
 images: [erik-jail.jpg, larry-joe-helmets.jpg, erik-rodney-9th-grade-graduation.jpg]
 tags: ['stories', 'recollections']
 visible: true

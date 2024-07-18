@@ -3,7 +3,6 @@ title: "Ramblin' Roses Vol.1 Issue 2"
 author: "Ada Morris"
 description: "Craddock Connection Ladies"
 pubDate: "Oct 26 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [rambling-roses-2.jpg]
 tags: ['rambling-rose']
 visible: true

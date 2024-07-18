@@ -3,7 +3,6 @@ title: "John W. Craddock"
 author: "The Verden News"
 description: "one of our old settlers"
 pubDate: "Feb 9 1934"
-heroImage: "/placeholder-hero.jpg"
 images: [young-john-craddock.jpeg, john-craddock.jpeg, john_craddock_family.jpg]
 tags: ['obituaries']
 visible: true

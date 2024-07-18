@@ -3,7 +3,6 @@ title: "Life in the Cottonwoods"
 author: "Lynne McCafferty"
 description: "only girl with 6 brothers"
 pubDate: "Jun 05 2023"
-heroImage: "/placeholder-hero.jpg"
 images: [morris-kids.png, roger-young.jpeg, chuck-judy.jpeg, lynne-stevie.jpeg]
 tags: ['recollections']
 visible: true

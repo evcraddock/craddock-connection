@@ -3,7 +3,6 @@ title: "Tornados and Locked Doors"
 author: "Samie Craddock"
 description: "Barbara, tornados and locked doors"
 pubDate: "Sep 29 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [erik-steph-craig-christy.jpg, Dean-Barbara-Craig-Christy.jpg, Larry-Samie-Erik-Stephanie.jpg]
 tags: ['recollections']
 visible: true

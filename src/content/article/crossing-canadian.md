@@ -3,7 +3,6 @@ title: "Crossing the Canadian"
 author: "Fay Finley"
 description: "family origin in Oklahoma"
 pubDate: "Aug 12 2010"
-heroImage: "/placeholder-hero.jpg"
 images: ['title.png', 'alonzo-ada-young.jpeg']
 tags: ['lore']
 visible: true

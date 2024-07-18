@@ -3,7 +3,6 @@ title: "Icy Roads and Broken Necks"
 author: "Lynne McCafferty"
 description: "riding with Grandma Lucille"
 pubDate: "Aug 19 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [grandma-lucille.png, Lynne-Angie.jpg, lucille.jpg]
 tags: ['recollections']
 visible: true

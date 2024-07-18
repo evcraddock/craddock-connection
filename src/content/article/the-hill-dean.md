@@ -3,7 +3,6 @@ title: "Sitting on the hill with Dean"
 author: "Lynne McCafferty"
 description: "The most soft hearted person I've known"
 pubDate: "October 20 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [dean_guitar.jpg, carl_ada_family.jpg, lynne-angie.jpg, dean.jpg, dean_graduation.jpg]
 tags: ['recollections']
 visible: true

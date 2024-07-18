@@ -3,7 +3,6 @@ title: "Glen Craddock at Hanford"
 author: "Bill Craddock"
 description: "Manhattan Project Hanford B-Reactor"
 pubDate: "Sep 20 2010"
-heroImage: "/placeholder-hero.jpg"
 images: ["usa-award.png", "craddock-men-1930s.jpg", "Glen-Carrie-1928.jpg", "glen-carrie.jpg"]
 tags: ['lore']
 visible: true

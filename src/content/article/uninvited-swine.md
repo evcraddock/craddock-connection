@@ -3,7 +3,6 @@ title: "Uninvited Swine"
 author: "Ada Morris"
 description: "Grandma wants nothing to do with it"
 pubDate: "Sep 22 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [Lon-Craddock-grandkids.png, van-craddock.jpg, craddock-men-1930s.jpg]
 tags: ['recollections']
 visible: true

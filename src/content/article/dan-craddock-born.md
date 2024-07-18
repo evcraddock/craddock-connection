@@ -3,7 +3,6 @@ title: "A Craddock is born"
 author: "Ada Morris"
 description: "Ada remembers the day Dan was born"
 pubDate: "October 12 2010"
-heroImage: "/placeholder-hero.jpg"
 images: ["ada-dan.png", "David_Dan_Jay.jpg", "dan-holly.jpg", "larry-dan.jpg"]
 tags: ['recollections']
 visible: true

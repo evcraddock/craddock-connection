@@ -3,7 +3,6 @@ title: "Knight in Shining Armor"
 author: "Judy Craddock Smith"
 description: "Judy's memories of her father growing up"
 pubDate: "Oct 07 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [leonard-with-dog.jpeg, reg-babies.jpg, reg-leonard.jpg, Van_Lucille_Leonard_Reginald.jpg]
 tags: ['recollections']
 visible: true

@@ -3,7 +3,6 @@ title: "Shot Day"
 author: "Judy Craddock Smith"
 description: "Never seen so many mad women in one building"
 pubDate: "November 3 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [Reg_Shirley_kids.jpg, brothers-hill-1987.jpg, jay-viola.jpg, joe-debbie.jpg, larry-bar.jpg, sherry-gail-leonard-judy-ronnie.jpg]
 tags: ['recollections']
 visible: true

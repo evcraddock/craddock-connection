@@ -3,7 +3,6 @@ title: "Me and Joe and cigarette loads!"
 author: "Larry Craddock"
 description: "Pranking dad ..."
 pubDate: "August 30 2010"
-heroImage: "/placeholder-hero.jpg"
 images: [van-larry-joe-lucille.png, lucille-van-craddock.jpg, larry-bar.jpg, larry-indian-shirt.jpg, van-craddock.jpg]
 tags: ['recollections']
 visible: true

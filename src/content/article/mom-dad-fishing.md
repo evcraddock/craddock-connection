@@ -4,7 +4,6 @@ author: "Larry Craddock"
 description: "You boys want to go fishing?"
 pubDate: "August 17 2010"
 images: [lucille-van.jpg, lucille-van-craddock.jpg, van-larry-joe-lucille.png, joe-larry-oregon.jpg, larry-lucille-joe.jpg]
-heroImage: "/placeholder-hero.jpg"
 tags: ['recollections']
 visible: true
 ---

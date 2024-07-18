@@ -3,7 +3,6 @@ title: "David W. Craddock"
 author: "The Verden News"
 description: "a man of strong conviction"
 pubDate: "May 2, 1913"
-heroImage: "/placeholder-hero.jpg"
 images: ["david-craddock.png"]
 tags: ['obituaries']
 visible: true

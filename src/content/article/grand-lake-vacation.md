@@ -3,7 +3,6 @@ title: "Grand Lake Vacation"
 author: "Erik Craddock"
 description: "grand lake vacation"
 pubDate: "May 28 2024"
-heroImage: "/placeholder-hero.jpg"
 images: [kids-at-play.jpeg, erik-linda-ethan.jpeg, rodney-erin-matthew-sarah.jpeg, matthew-sarah.jpeg, sarah-matthew-jail.jpeg, craddock-crew-school-house.jpeg, erik-rodney.jpeg, ethan-jail.jpeg, rodney-erik-foolin.jpeg, matthew-fishing.jpeg, rodney-fishing.jpeg, sarah-fishing.jpeg, matthew-zoo.jpeg, matthew-sarah-rodney-zoo.jpeg, sarah-zoo.jpeg, ethan-eating-flame.jpeg, sofia-ethan.jpeg, matthew-sarah-2.jpeg, kids-zoo.jpeg, rodney-family-dinner.jpeg, linda-sofia-ethan-dinner.jpeg]
 tags: ['recollections', 'stories']
 visible: true
