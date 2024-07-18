@@ -3,7 +3,7 @@ title: "One last road trip with Onis"
 author: "Erik Craddock"
 description: ""
 pubDate: "July 17 2024"
-images: [onis-craddock-family.jpeg, family-cistern.png, crew.jpeg , onis-betty.jpeg, onis-family.jpeg, chickasha-lake.jpeg,van-craddock-marker.png, lucille-craddock-marker.png, cistern.png,old-root-cellar.jpeg, walnut-tree.jpeg, onis.png, linda.jpeg, rhonda-trica-karla.jpeg,trica.png,  karla.jpeg,verna.jpeg, brothers.jpeg ]
+images: [onis-craddock-family.jpg, family-cistern.png, crew.jpg , onis-betty.jpg, onis-family.jpg, chickasha-lake.jpg,van-craddock-marker.png, lucille-craddock-marker.png, cistern.png,old-root-cellar.jpg, walnut-tree.jpg, onis.png, linda.jpg, rhonda-trica-karla.jpg,trica.png,  karla.jpg,verna.jpg, brothers.jpg ]
 tags: ['recollections']
 visible: true
 ---
